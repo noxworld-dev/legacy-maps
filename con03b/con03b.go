@@ -167,29 +167,24 @@ func Worker1DialogStart() {
 	var v0 int
 	ns.LookAtObject(obj4, ns.GetHost())
 	ns.DestroyEveryChat()
-	v0 = ivar15
-	if v0 == 1 {
+	switch v0 = ivar15; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL4
-	}
-	if v0 == 5 {
+	case 5:
 		goto LABEL5
-	}
-	if v0 == 6 {
+	case 6:
 		goto LABEL6
-	}
-	if v0 == 7 {
+	case 7:
 		goto LABEL7
+	default:
+		goto LABEL8
 	}
-	goto LABEL8
 LABEL1:
 	ns.TellStory(ns.DemonRecognize, "Con03B.scr:Worker1B")
 	goto LABEL9
@@ -241,14 +236,14 @@ LABEL9:
 }
 func Worker1DialogEnd() {
 	var v0 int
-	v0 = ivar15
-	if v0 == 1 {
+	switch v0 = ivar15; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 5 {
+	case 5:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Frozen(ns.GetHost(), false)
 	ns.FrameTimer(2, Worker1Start)
@@ -271,20 +266,18 @@ func Worker2DialogStart() {
 	var v0 int
 	ns.LookAtObject(obj5, ns.GetHost())
 	ns.DestroyEveryChat()
-	v0 = gvar16
-	if v0 == 0 {
+	switch v0 = gvar16; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	if !(ivar22 <= 2) {
 		goto LABEL6
@@ -311,14 +304,14 @@ LABEL8:
 }
 func Worker2DialogEnd() {
 	var v0 int
-	v0 = gvar16
-	if v0 == 0 {
+	switch v0 = gvar16; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Frozen(ns.GetHost(), false)
 	ns.CreatureFollow(obj5, ns.GetHost())
@@ -349,20 +342,18 @@ func Worker3DialogStart() {
 	var v0 int
 	ns.LookAtObject(obj6, ns.GetHost())
 	ns.DestroyEveryChat()
-	v0 = gvar17
-	if v0 == 0 {
+	switch v0 = gvar17; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	if !(ivar22 <= 2) {
 		goto LABEL6
@@ -389,14 +380,14 @@ LABEL8:
 }
 func Worker3DialogEnd() {
 	var v0 int
-	v0 = gvar17
-	if v0 == 0 {
+	switch v0 = gvar17; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Frozen(ns.GetHost(), false)
 	ns.CreatureFollow(obj6, ns.GetHost())
@@ -427,20 +418,18 @@ func Worker4DialogStart() {
 	var v0 int
 	ns.LookAtObject(obj7, ns.GetHost())
 	ns.DestroyEveryChat()
-	v0 = gvar18
-	if v0 == 0 {
+	switch v0 = gvar18; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.DemonRecognize, "Con03B.scr:WorkersTalkA")
 	goto LABEL6
@@ -460,14 +449,14 @@ LABEL6:
 }
 func Worker4DialogEnd() {
 	var v0 int
-	v0 = gvar18
-	if v0 == 0 {
+	switch v0 = gvar18; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Frozen(ns.GetHost(), false)
 	ns.CreatureFollow(obj7, ns.GetHost())
@@ -486,20 +475,18 @@ func Worker5DialogStart() {
 	var v0 int
 	ns.LookAtObject(obj8, ns.GetHost())
 	ns.DestroyEveryChat()
-	v0 = gvar19
-	if v0 == 0 {
+	switch v0 = gvar19; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.DemonRecognize, "Con03B.scr:WorkersTalkA")
 	goto LABEL6
@@ -519,14 +506,14 @@ LABEL6:
 }
 func Worker5DialogEnd() {
 	var v0 int
-	v0 = gvar19
-	if v0 == 0 {
+	switch v0 = gvar19; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Frozen(ns.GetHost(), false)
 	ns.CreatureFollow(obj8, ns.GetHost())
@@ -545,20 +532,18 @@ func Worker6DialogStart() {
 	var v0 int
 	ns.LookAtObject(obj9, ns.GetHost())
 	ns.DestroyEveryChat()
-	v0 = gvar20
-	if v0 == 0 {
+	switch v0 = gvar20; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	if !(ivar22 <= 2) {
 		goto LABEL6
@@ -585,14 +570,14 @@ LABEL8:
 }
 func Worker6DialogEnd() {
 	var v0 int
-	v0 = gvar20
-	if v0 == 0 {
+	switch v0 = gvar20; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Frozen(ns.GetHost(), false)
 	ns.CreatureFollow(obj9, ns.GetHost())
@@ -759,26 +744,22 @@ LABEL1:
 }
 func ForemanDialogStart() {
 	var v0 int
-	v0 = gvar81
-	if v0 == 1 {
+	switch v0 = gvar81; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL4
-	}
-	if v0 == 5 {
+	case 5:
 		goto LABEL5
-	}
-	if v0 == 6 {
+	case 6:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL1:
 	ns.TellStory(ns.DemonRecognize, "Con03C.scr:ForemanA")
 	goto LABEL8
@@ -804,26 +785,22 @@ LABEL8:
 }
 func ForemanDialogEnd() {
 	var v0 int
-	v0 = gvar81
-	if v0 == 1 {
+	switch v0 = gvar81; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL4
-	}
-	if v0 == 5 {
+	case 5:
 		goto LABEL5
-	}
-	if v0 == 6 {
+	case 6:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL1:
 	ns.JournalEdit(ns.GetHost(), "LocateMineForeman", 4)
 	ns.PrintToAll("Con03C.scr:TaskComplete")
@@ -1035,8 +1012,7 @@ func MapInitialize() {
 	ns.FrameTimer(40, SetupElevators)
 }
 func MonsterGoHome() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -1086,23 +1062,20 @@ func Worker1Rec() {
 }
 func WorkerRescued() {
 	var v0 int
-	v0 = ivar21
-	if v0 == 0 {
+	switch v0 = ivar21; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	ns.PrintToAll("Con03B.scr:Rescued2")
 	goto LABEL7
@@ -1178,17 +1151,16 @@ func Worker1Movement() {
 	if !ns.IsCaller(obj4) {
 		goto LABEL1
 	}
-	v0 = gvar127
-	if v0 == 0 {
+	switch v0 = gvar127; v0 {
+	case 0:
 		goto LABEL2
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL3
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL2:
 	ns.Move(obj4, wp95)
 	ns.Chat(obj4, "Con03B.scr:Worker1ChatB")
@@ -1550,8 +1522,7 @@ func WorkerDie() {
 	ns.DeathScreen(3)
 }
 func WorkerHurt() {
-	r0 := ns.Random(1, 2)
-	if r0 != 1 {
+	if ns.Random(1, 2) != 1 {
 		goto LABEL1
 	}
 	ns.Chat(ns.GetTrigger(), "Con03B.scr:WorkerHurt")

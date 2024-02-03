@@ -159,20 +159,18 @@ func HONTrigger() {
 }
 func HorvathStart() {
 	var v0 int
-	v0 = gvar63
-	if v0 == gvar54 {
+	switch v0 = gvar63; v0 {
+	case gvar54:
 		goto LABEL1
-	}
-	if v0 == gvar55 {
+	case gvar55:
 		goto LABEL2
-	}
-	if v0 == gvar56 {
+	case gvar56:
 		goto LABEL3
-	}
-	if v0 == gvar59 {
+	case gvar59:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "Wiz07.scr:HorvathTalk01")
 	goto LABEL5
@@ -190,17 +188,16 @@ LABEL5:
 }
 func HorvathEnd() {
 	var v0 int
-	v0 = gvar63
-	if v0 == gvar54 {
+	switch v0 = gvar63; v0 {
+	case gvar54:
 		goto LABEL1
-	}
-	if v0 == gvar55 {
+	case gvar55:
 		goto LABEL2
-	}
-	if v0 == gvar56 {
+	case gvar56:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.CreatureFollow(obj42, ns.GetHost())
 	ns.CancelDialog(obj42)

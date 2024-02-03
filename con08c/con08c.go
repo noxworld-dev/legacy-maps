@@ -347,17 +347,17 @@ func SummonCircle01Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")
@@ -395,17 +395,17 @@ func SummonCircle02Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")
@@ -443,17 +443,17 @@ func SummonCircle03Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")
@@ -491,17 +491,17 @@ func SummonCircle04Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")
@@ -539,17 +539,17 @@ func SummonCircle05Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")
@@ -587,17 +587,17 @@ func SummonCircle06Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")
@@ -635,17 +635,17 @@ func SummonCircle07Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")
@@ -683,17 +683,17 @@ func SummonCircle08Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")
@@ -731,17 +731,17 @@ func SummonCircle09Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")
@@ -779,17 +779,17 @@ func SummonCircle10Activate() {
 	ns.ObjectGroupOff(gvar33[gvar37])
 	ns.AudioEvent(ns.SummonCast, wp45[gvar37])
 	ns.Effect(ns.SMOKE_BLAST, ns.GetWaypointX(wp45[gvar37]), ns.GetWaypointY(wp45[gvar37]), 0, 0)
-	if r4 := ns.Random(0, 100); !(r4 <= ivar42) {
+	if !(ns.Random(0, 100) <= ivar42) {
 		goto LABEL2
 	}
-	v1 = ns.Random(0, 1)
-	if v1 == 0 {
+	switch v1 = ns.Random(0, 1); v1 {
+	case 0:
 		goto LABEL3
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	v0 = ns.CreateObject("BomberYellow", wp45[gvar37])
 	ns.TrapSpells(v0, ns.SPELL_METEOR, "", "")

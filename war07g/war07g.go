@@ -131,32 +131,26 @@ func LightShow() {
 	)
 	ns.MoveWaypoint(wp35, ns.GetObjectX(obj4), ns.GetObjectY(obj4))
 	v0 = ns.Random(1, 8)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL1
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v1 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v1 == 4 {
+	case 4:
 		goto LABEL4
-	}
-	if v1 == 5 {
+	case 5:
 		goto LABEL5
-	}
-	if v1 == 6 {
+	case 6:
 		goto LABEL6
-	}
-	if v1 == 7 {
+	case 7:
 		goto LABEL7
-	}
-	if v1 == 8 {
+	case 8:
 		goto LABEL8
+	default:
+		goto LABEL9
 	}
-	goto LABEL9
 LABEL1:
 	ns.AudioEvent(ns.LightningBolt, wp35)
 	ns.Effect(ns.LIGHTNING, ns.GetObjectX(obj6), ns.GetObjectY(obj6), ns.GetObjectX(obj4), ns.GetObjectY(obj4))

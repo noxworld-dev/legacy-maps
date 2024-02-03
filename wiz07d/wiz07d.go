@@ -38,28 +38,28 @@ func ReceptionTalkStart() {
 		v1 int
 		v2 int
 	)
-	v2 = gvar18
-	if v2 == gvar16 {
+	switch v2 = gvar18; v2 {
+	case gvar16:
 		goto LABEL1
-	}
-	if v2 == gvar17 {
+	case gvar17:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "Wiz07:Reception01")
 	gvar18 = gvar17
 	goto LABEL3
 LABEL2:
 	v0 = ns.Random(1, 2)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL4
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL5
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL4:
 	ns.TellStory(ns.HumanMaleEatFood, "Wiz07:Reception02")
 	goto LABEL3

@@ -1,9 +1,8 @@
 package war04b
 
 import (
-	"strconv"
-
 	"github.com/noxworld-dev/noxscript/ns/v3"
+	"strconv"
 )
 
 var (
@@ -129,32 +128,26 @@ func flameLever() {
 	if !flag19 {
 		goto LABEL1
 	}
-	v0 = gvar26
-	if v0 == gvar12 {
+	switch v0 = gvar26; v0 {
+	case gvar12:
 		goto LABEL2
-	}
-	if v0 == gvar13 {
+	case gvar13:
 		goto LABEL3
-	}
-	if v0 == gvar14 {
+	case gvar14:
 		goto LABEL4
-	}
-	if v0 == gvar15 {
+	case gvar15:
 		goto LABEL5
-	}
-	if v0 == gvar16 {
+	case gvar16:
 		goto LABEL6
-	}
-	if v0 == gvar17 {
+	case gvar17:
 		goto LABEL7
-	}
-	if v0 == gvar18 {
+	case gvar18:
 		goto LABEL8
-	}
-	if v0 == gvar11 {
+	case gvar11:
 		goto LABEL9
+	default:
+		goto LABEL10
 	}
-	goto LABEL10
 LABEL2:
 	ivar24 = 0
 	for {
@@ -384,23 +377,20 @@ func necroDies() {
 }
 func necroTalkStart() {
 	var v0 int
-	v0 = gvar27
-	if v0 == 1 {
+	switch v0 = gvar27; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL4
-	}
-	if v0 == 5 {
+	case 5:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	ns.TellStory(ns.DemonRecognize, "Con04a:NecroTaunts")
 	ns.Frozen(obj34, true)
@@ -566,20 +556,18 @@ LABEL2:
 }
 func HecubahDialogStart() {
 	var v0 int
-	v0 = gvar28
-	if v0 == gvar7 {
+	switch v0 = gvar28; v0 {
+	case gvar7:
 		goto LABEL1
-	}
-	if v0 == gvar8 {
+	case gvar8:
 		goto LABEL2
-	}
-	if v0 == gvar9 {
+	case gvar9:
 		goto LABEL3
-	}
-	if v0 == gvar10 {
+	case gvar10:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.GhostRecognize, "War04a:Hecubah")
 	goto LABEL5
@@ -606,20 +594,18 @@ func HecubahDialogEnd() {
 	)
 	_ = v1
 	_ = v0
-	v5 = gvar28
-	if v5 == gvar7 {
+	switch v5 = gvar28; v5 {
+	case gvar7:
 		goto LABEL1
-	}
-	if v5 == gvar8 {
+	case gvar8:
 		goto LABEL2
-	}
-	if v5 == gvar9 {
+	case gvar9:
 		goto LABEL3
-	}
-	if v5 == gvar10 {
+	case gvar10:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.FrameTimer(20, Zombie2Rise)
 	ns.FrameTimer(45, Zombie1Rise)
@@ -742,8 +728,7 @@ func ActivateFistTrap13() {
 	DropFist(12)
 }
 func NoEnemys() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

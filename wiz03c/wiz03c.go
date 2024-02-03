@@ -89,8 +89,7 @@ func GotoWiz03b() {
 	ns.FrameTimer(60, PlayerWiz03bExit)
 }
 func MonsterGoHome() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

@@ -225,14 +225,14 @@ func StartBatAttack() {
 func BatGroup1Die() {
 	var v0 int
 	ivar23 += 1
-	v0 = ivar23
-	if v0 == 1 {
+	switch v0 = ivar23; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.AggressionLevel(obj11, 0.83)
 	ns.Attack(obj11, ns.GetHost())
@@ -246,14 +246,14 @@ LABEL3:
 func BatGroup2Die() {
 	var v0 int
 	ivar24 += 1
-	v0 = ivar24
-	if v0 == 1 {
+	switch v0 = ivar24; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.AggressionLevel(obj13, 0.83)
 	ns.Attack(obj13, ns.GetHost())
@@ -265,8 +265,7 @@ LABEL3:
 	return
 }
 func batToOrchard() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -413,11 +412,12 @@ func ShortDelay() {
 }
 func ElevatorExplode() {
 	var v0 int
-	v0 = ivar35
-	if v0 == 3 {
+	switch v0 = ivar35; v0 {
+	case 3:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	ns.MoveWaypoint(wp22, ns.GetObjectX(ns.GetHost()), ns.GetObjectY(ns.GetHost()))
 	ns.AudioEvent(ns.MechGolemDie, wp22)
@@ -648,26 +648,22 @@ func BingStart1() {
 	)
 	ns.DestroyEveryChat()
 	v0 = ns.Random(1, 6)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL1
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v1 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v1 == 4 {
+	case 4:
 		goto LABEL4
-	}
-	if v1 == 5 {
+	case 5:
 		goto LABEL5
-	}
-	if v1 == 6 {
+	case 6:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "War02A:BartenderTalk1aStart")
 	goto LABEL7
@@ -720,14 +716,14 @@ func LydiaStart3() {
 		v1 int
 	)
 	v0 = ns.Random(1, 2)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL1
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "War01A.scr:LydiaTalk01")
 	goto LABEL3
@@ -747,14 +743,14 @@ func MelStart1() {
 	ns.CreatureIdle(obj47)
 	ns.LookAtObject(obj47, ns.GetHost())
 	ivar90 = ns.Random(1, 2)
-	v0 = ivar90
-	if v0 == 1 {
+	switch v0 = ivar90; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "War01A.scr:Maiden1Talk01")
 	goto LABEL3
@@ -1023,23 +1019,20 @@ func GHStart8() {
 }
 func GHEnd8() {
 	var v0 int
-	v0 = gvar25
-	if v0 == 0 {
+	switch v0 = gvar25; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	ns.CancelDialog(obj16)
 	goto LABEL6
@@ -1445,20 +1438,18 @@ func CaptainStart2() {
 		v1 int
 	)
 	v0 = ns.Random(1, 4)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL1
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v1 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v1 == 4 {
+	case 4:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "War01a:CaptainTalk2aStart")
 	goto LABEL5
@@ -1756,11 +1747,12 @@ func DisableGuys() {
 }
 func WizardReport() {
 	var v0 int
-	v0 = gvar133
-	if v0 == gvar127 {
+	switch v0 = gvar133; v0 {
+	case gvar127:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	ns.EnchantOff(obj136, ns.ENCHANT_INVISIBLE)
 	ns.LookAtObject(obj136, obj138)
@@ -1785,14 +1777,14 @@ func WizardInjured() {
 	if !(ivar134 > 1) {
 		goto LABEL1
 	}
-	v0 = gvar133
-	if v0 == gvar129 {
+	switch v0 = gvar133; v0 {
+	case gvar129:
 		goto LABEL2
-	}
-	if v0 == gvar131 {
+	case gvar131:
 		goto LABEL3
+	default:
+		goto LABEL1
 	}
-	goto LABEL1
 LABEL2:
 	ns.DestroyEveryChat()
 	ns.FrameTimer(5, SwapWizards)

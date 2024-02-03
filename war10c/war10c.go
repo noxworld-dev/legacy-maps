@@ -548,8 +548,7 @@ func Necro1TeleportInjured() {
 	ns.Effect(ns.SMOKE_BLAST, v0, v1, 0, 0)
 }
 func SmackPlayer() {
-	r0 := ns.IsAttackedBy(ns.GetCaller(), ns.GetTrigger())
-	if !r0 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetTrigger()) {
 		goto LABEL1
 	}
 	ns.LookAtObject(ns.GetTrigger(), ns.GetCaller())

@@ -119,14 +119,14 @@ func UndertakerEnd() {
 }
 func MaxDialogStart() {
 	var v0 int
-	v0 = gvar50
-	if v0 == gvar44 {
+	switch v0 = gvar50; v0 {
+	case gvar44:
 		goto LABEL1
-	}
-	if v0 == gvar45 {
+	case gvar45:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "War07a.scr:MaxOffer01")
 	goto LABEL3
@@ -151,17 +151,16 @@ func MaxDialogEnd() {
 	v3 = 2
 	v4 = 0
 	v0 = ns.GetAnswer(obj7)
-	v5 = v0
-	if v5 == v4 {
+	switch v5 = v0; v5 {
+	case v4:
 		goto LABEL1
-	}
-	if v5 == v3 {
+	case v3:
 		goto LABEL2
-	}
-	if v5 == v2 {
+	case v2:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	gvar50 = gvar45
 	ResetMaxDialog()
@@ -334,8 +333,7 @@ func NewMaxEnd() {
 	ns.Frozen(obj7, false)
 }
 func DemonAway() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

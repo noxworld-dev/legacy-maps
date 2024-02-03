@@ -92,14 +92,14 @@ func ProtectTheKing() {
 }
 func KingStart() {
 	var v0 int
-	v0 = gvar16
-	if v0 == gvar14 {
+	switch v0 = gvar16; v0 {
+	case gvar14:
 		goto LABEL1
-	}
-	if v0 == gvar15 {
+	case gvar15:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "Con05:OgreTalk07")
 	ns.LookAtObject(obj21, ns.GetHost())
@@ -113,14 +113,14 @@ LABEL3:
 }
 func KingEnd() {
 	var v0 int
-	v0 = gvar16
-	if v0 == gvar14 {
+	switch v0 = gvar16; v0 {
+	case gvar14:
 		goto LABEL1
-	}
-	if v0 == gvar15 {
+	case gvar15:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	gvar16 = gvar15
 	ns.StartDialog(obj21, ns.GetHost())

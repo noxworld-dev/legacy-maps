@@ -131,8 +131,7 @@ LABEL17:
 	ns.SetOwner(ns.GetHost(), obj20)
 }
 func FirstSetPiece() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if r1 {
+	if ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) {
 		goto LABEL1
 	}
 	ns.WideScreen(true)

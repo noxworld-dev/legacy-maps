@@ -73,14 +73,14 @@ func BanditAttack() {
 }
 func HorrendousTalkStart() {
 	var v0 int
-	v0 = gvar30
-	if v0 == gvar28 {
+	switch v0 = gvar30; v0 {
+	case gvar28:
 		goto LABEL1
-	}
-	if v0 == gvar29 {
+	case gvar29:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03a:HorrendousSpeech")
 	gvar30 = gvar29
@@ -120,14 +120,14 @@ func MineGuardTalkEnd() {
 func GalavaGuard1TalkStart() {
 	var v0 int
 	ns.LookAtObject(obj11, ns.GetHost())
-	v0 = gvar33
-	if v0 == gvar31 {
+	switch v0 = gvar33; v0 {
+	case gvar31:
 		goto LABEL1
-	}
-	if v0 == gvar32 {
+	case gvar32:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03a:GalavaGuardWarn")
 	goto LABEL3
@@ -139,14 +139,14 @@ LABEL3:
 }
 func GalavaGuard1TalkEnd() {
 	var v0 int
-	v0 = gvar33
-	if v0 == gvar31 {
+	switch v0 = gvar33; v0 {
+	case gvar31:
 		goto LABEL1
-	}
-	if v0 == gvar32 {
+	case gvar32:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	goto LABEL3
 LABEL2:
@@ -157,14 +157,14 @@ LABEL3:
 func GalavaGuard2TalkStart() {
 	var v0 int
 	ns.LookAtObject(obj12, ns.GetHost())
-	v0 = gvar33
-	if v0 == gvar31 {
+	switch v0 = gvar33; v0 {
+	case gvar31:
 		goto LABEL1
-	}
-	if v0 == gvar32 {
+	case gvar32:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03a:GalavaGuardEnd")
 	goto LABEL3
@@ -176,14 +176,14 @@ LABEL3:
 }
 func GalavaGuard2TalkEnd() {
 	var v0 int
-	v0 = gvar33
-	if v0 == gvar31 {
+	switch v0 = gvar33; v0 {
+	case gvar31:
 		goto LABEL1
-	}
-	if v0 == gvar32 {
+	case gvar32:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	goto LABEL3
 LABEL2:
@@ -194,14 +194,14 @@ LABEL3:
 func IxGuard1TalkStart() {
 	var v0 int
 	ns.LookAtObject(obj18, ns.GetHost())
-	v0 = gvar36
-	if v0 == gvar34 {
+	switch v0 = gvar36; v0 {
+	case gvar34:
 		goto LABEL1
-	}
-	if v0 == gvar35 {
+	case gvar35:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03a:IxGuard1Intro")
 	goto LABEL3
@@ -213,14 +213,14 @@ LABEL3:
 }
 func IxGuard1TalkEnd() {
 	var v0 int
-	v0 = gvar36
-	if v0 == gvar34 {
+	switch v0 = gvar36; v0 {
+	case gvar34:
 		goto LABEL1
-	}
-	if v0 == gvar35 {
+	case gvar35:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.UnlockDoor(obj20)
 	ns.UnlockDoor(obj21)
@@ -235,14 +235,14 @@ LABEL3:
 func IxGuard2TalkStart() {
 	var v0 int
 	ns.LookAtObject(obj19, ns.GetHost())
-	v0 = gvar39
-	if v0 == gvar37 {
+	switch v0 = gvar39; v0 {
+	case gvar37:
 		goto LABEL1
-	}
-	if v0 == gvar38 {
+	case gvar38:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03a:IxGuard2Intro")
 	goto LABEL3
@@ -254,14 +254,14 @@ LABEL3:
 }
 func IxGuard2TalkEnd() {
 	var v0 int
-	v0 = gvar39
-	if v0 == gvar37 {
+	switch v0 = gvar39; v0 {
+	case gvar37:
 		goto LABEL1
-	}
-	if v0 == gvar38 {
+	case gvar38:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.UnlockDoor(obj20)
 	ns.UnlockDoor(obj21)
@@ -377,8 +377,7 @@ func WaspIdle() {
 	ns.CreatureGroupIdle(gvar41)
 }
 func MonsterGoHome() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

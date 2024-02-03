@@ -155,20 +155,18 @@ func PlayerDeath() {
 }
 func ReleaseCharmedWolf(a1 int) {
 	var v0 int
-	v0 = a1
-	if v0 == 0 {
+	switch v0 = a1; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.WallOpen(ns.Wall(128, 106))
 	ns.CreatureFollow(obj13[a1], ns.GetHost())
@@ -206,17 +204,16 @@ LABEL5:
 }
 func HenrickTalkStart() {
 	var v0 int
-	v0 = gvar12
-	if v0 == gvar4 {
+	switch v0 = gvar12; v0 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v0 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v0 == gvar6 {
+	case gvar6:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.LookAtObject(obj7, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "War08b:HenrickSalesPitchA")
@@ -248,30 +245,28 @@ func HenrickTalkEnd() {
 	v2 = 1
 	v3 = 2
 	v4 = 0
-	v7 = gvar12
-	if v7 == gvar4 {
+	switch v7 = gvar12; v7 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v7 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v7 == gvar6 {
+	case gvar6:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	v1 = ns.GetAnswer(obj7)
-	v5 = v1
-	if v5 == v2 {
+	switch v5 = v1; v5 {
+	case v2:
 		goto LABEL5
-	}
-	if v5 == v3 {
+	case v3:
 		goto LABEL6
-	}
-	if v5 == v4 {
+	case v4:
 		goto LABEL7
+	default:
+		goto LABEL8
 	}
-	goto LABEL8
 LABEL5:
 	v0 = ns.GetGold(ns.GetHost())
 	if !(v0 < ivar9) {
@@ -297,17 +292,16 @@ LABEL8:
 	goto LABEL4
 LABEL2:
 	v1 = ns.GetAnswer(obj7)
-	v6 = v1
-	if v6 == v2 {
+	switch v6 = v1; v6 {
+	case v2:
 		goto LABEL11
-	}
-	if v6 == v3 {
+	case v3:
 		goto LABEL12
-	}
-	if v6 == v4 {
+	case v4:
 		goto LABEL13
+	default:
+		goto LABEL14
 	}
-	goto LABEL14
 LABEL11:
 	v0 = ns.GetGold(ns.GetHost())
 	if !(v0 < ivar9) {
@@ -413,20 +407,18 @@ func MayorTalkStart() {
 	}
 	gvar65 = gvar63
 LABEL1:
-	v0 = gvar65
-	if v0 == gvar61 {
+	switch v0 = gvar65; v0 {
+	case gvar61:
 		goto LABEL2
-	}
-	if v0 == gvar62 {
+	case gvar62:
 		goto LABEL3
-	}
-	if v0 == gvar63 {
+	case gvar63:
 		goto LABEL4
-	}
-	if v0 == gvar64 {
+	case gvar64:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL2:
 	ns.LookAtObject(obj15, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "War03b:MayorIntro")
@@ -450,20 +442,18 @@ LABEL6:
 func MayorsGuardTalkStart() {
 	var v0 int
 	ns.LookAtObject(obj16, ns.GetHost())
-	v0 = gvar93
-	if v0 == gvar89 {
+	switch v0 = gvar93; v0 {
+	case gvar89:
 		goto LABEL1
-	}
-	if v0 == gvar90 {
+	case gvar90:
 		goto LABEL2
-	}
-	if v0 == gvar91 {
+	case gvar91:
 		goto LABEL3
-	}
-	if v0 == gvar92 {
+	case gvar92:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03b:MayorsGuardIntro")
 	goto LABEL5
@@ -482,14 +472,14 @@ LABEL5:
 func GatekeeperTalkStart() {
 	var v0 int
 	ns.LookAtObject(obj23, ns.GetHost())
-	v0 = gvar88
-	if v0 == gvar86 {
+	switch v0 = gvar88; v0 {
+	case gvar86:
 		goto LABEL1
-	}
-	if v0 == gvar87 {
+	case gvar87:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03b:GatekeeperPre")
 	goto LABEL3
@@ -502,14 +492,14 @@ LABEL3:
 func BarkeeperTalkStart() {
 	var v0 int
 	ns.LookAtObject(obj24, ns.GetHost())
-	v0 = gvar85
-	if v0 == gvar83 {
+	switch v0 = gvar85; v0 {
+	case gvar83:
 		goto LABEL1
-	}
-	if v0 == gvar84 {
+	case gvar84:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03b:BarkeeperPre")
 	goto LABEL3
@@ -526,17 +516,16 @@ func ContestGuardTalkStart() {
 func BridgeGuardTalkStart() {
 	var v0 int
 	ns.LookAtObject(obj36, ns.GetHost())
-	v0 = gvar97
-	if v0 == gvar94 {
+	switch v0 = gvar97; v0 {
+	case gvar94:
 		goto LABEL1
-	}
-	if v0 == gvar95 {
+	case gvar95:
 		goto LABEL2
-	}
-	if v0 == gvar96 {
+	case gvar96:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03b:BridgeGuardIntro")
 	goto LABEL4
@@ -553,14 +542,14 @@ func Townsman1TalkStart() {
 	var v0 int
 	ns.CreatureIdle(obj26)
 	ns.LookAtObject(obj26, ns.GetHost())
-	v0 = gvar73
-	if v0 == gvar71 {
+	switch v0 = gvar73; v0 {
+	case gvar71:
 		goto LABEL1
-	}
-	if v0 == gvar72 {
+	case gvar72:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03b:T1Pre")
 	goto LABEL3
@@ -574,14 +563,14 @@ func Townsman2TalkStart() {
 	var v0 int
 	ns.CreatureIdle(obj27)
 	ns.LookAtObject(obj27, ns.GetHost())
-	v0 = gvar76
-	if v0 == gvar74 {
+	switch v0 = gvar76; v0 {
+	case gvar74:
 		goto LABEL1
-	}
-	if v0 == gvar75 {
+	case gvar75:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03b:T2Pre")
 	goto LABEL3
@@ -594,14 +583,14 @@ LABEL3:
 func Townsman3TalkStart() {
 	var v0 int
 	ns.LookAtObject(obj28, ns.GetHost())
-	v0 = gvar79
-	if v0 == gvar77 {
+	switch v0 = gvar79; v0 {
+	case gvar77:
 		goto LABEL1
-	}
-	if v0 == gvar78 {
+	case gvar78:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Chat(obj28, "War02a:NewTownsman1")
 	goto LABEL3
@@ -614,14 +603,14 @@ LABEL3:
 func Townsman4TalkStart() {
 	var v0 int
 	ns.LookAtObject(obj29, ns.GetHost())
-	v0 = gvar82
-	if v0 == gvar80 {
+	switch v0 = gvar82; v0 {
+	case gvar80:
 		goto LABEL1
-	}
-	if v0 == gvar81 {
+	case gvar81:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03b:T4Pre")
 	goto LABEL3
@@ -639,20 +628,18 @@ func AldwynTalkStart() {
 	}
 	gvar70 = gvar68
 LABEL1:
-	v0 = gvar70
-	if v0 == gvar66 {
+	switch v0 = gvar70; v0 {
+	case gvar66:
 		goto LABEL2
-	}
-	if v0 == gvar67 {
+	case gvar67:
 		goto LABEL3
-	}
-	if v0 == gvar68 {
+	case gvar68:
 		goto LABEL4
-	}
-	if v0 == gvar69 {
+	case gvar69:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL2:
 	ns.TellStory(ns.SwordsmanHurt, "War03b:AldwynIntro")
 	goto LABEL6
@@ -694,17 +681,16 @@ func Maiden2TalkStart() {
 }
 func MayorTalkEnd() {
 	var v0 int
-	v0 = gvar65
-	if v0 == gvar61 {
+	switch v0 = gvar65; v0 {
+	case gvar61:
 		goto LABEL1
-	}
-	if v0 == gvar62 {
+	case gvar62:
 		goto LABEL2
-	}
-	if v0 == gvar63 {
+	case gvar63:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.Move(obj15, wp58)
 	ns.Print("Con01a:NewJournalEntry")
@@ -769,11 +755,12 @@ func Townsman4TalkEnd() {
 }
 func AldwynTalkEnd() {
 	var v0 int
-	v0 = gvar70
-	if v0 == gvar66 {
+	switch v0 = gvar70; v0 {
+	case gvar66:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	ns.Drop(obj33, obj34)
 	ns.Drop(obj33, obj35)

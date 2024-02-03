@@ -268,17 +268,16 @@ func WolfOrders() {
 }
 func CainDialogStart() {
 	var v0 int
-	v0 = gvar53
-	if v0 == gvar45 {
+	switch v0 = gvar53; v0 {
+	case gvar45:
 		goto LABEL1
-	}
-	if v0 == gvar46 {
+	case gvar46:
 		goto LABEL2
-	}
-	if v0 == gvar47 {
+	case gvar47:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War09c:CainAsk")
 	flag57 = true
@@ -300,17 +299,16 @@ func CainDialogEnd() {
 		v1 ns.ObjectID
 		v2 int
 	)
-	v2 = gvar53
-	if v2 == gvar45 {
+	switch v2 = gvar53; v2 {
+	case gvar45:
 		goto LABEL1
-	}
-	if v2 == gvar46 {
+	case gvar46:
 		goto LABEL2
-	}
-	if v2 == gvar47 {
+	case gvar47:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	v0 = ns.GetAnswer(obj9)
 	if v0 != 1 {
@@ -395,17 +393,16 @@ func WolfHarass2() {
 	ns.ObjectOn(obj12)
 	ns.ObjectOn(obj13)
 LABEL1:
-	v2 = v1
-	if v2 == 0 {
+	switch v2 = v1; v2 {
+	case 0:
 		goto LABEL2
-	}
-	if v2 == 1 {
+	case 1:
 		goto LABEL3
-	}
-	if v2 == 2 {
+	case 2:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL2:
 	if !(flag58 == false && flag63 == false) {
 		goto LABEL6
@@ -454,8 +451,7 @@ func MapEntry() {
 	ns.NoWallSound(false)
 }
 func KeepOut() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -569,14 +565,14 @@ func CainPlea() {
 	if !(ns.IsCaller(ns.GetHost()) && ns.CurrentHealth(obj9) > 0) {
 		goto LABEL1
 	}
-	v0 = gvar54
-	if v0 == gvar48 {
+	switch v0 = gvar54; v0 {
+	case gvar48:
 		goto LABEL2
-	}
-	if v0 == gvar49 {
+	case gvar49:
 		goto LABEL3
+	default:
+		goto LABEL1
 	}
-	goto LABEL1
 LABEL2:
 	ns.Chat(obj9, "War09c:CainPlea")
 	goto LABEL1
@@ -587,8 +583,7 @@ LABEL1:
 	return
 }
 func WolfHarass() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !(r1 && flag61 == false) {
+	if !(ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) && flag61 == false) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -670,14 +665,14 @@ func NecroDialogStart() {
 		v1 int
 	)
 	v0 = ns.Random(1, 2)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL1
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.LookAtObject(obj16, ns.GetHost())
 	ns.LookAtObject(obj15, ns.GetHost())

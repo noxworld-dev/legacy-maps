@@ -375,26 +375,22 @@ func ArchivistTalkStart() {
 	}
 	gvar35 = gvar33
 LABEL1:
-	v0 = gvar35
-	if v0 == gvar24 {
+	switch v0 = gvar35; v0 {
+	case gvar24:
 		goto LABEL2
-	}
-	if v0 == gvar26 {
+	case gvar26:
 		goto LABEL3
-	}
-	if v0 == gvar31 {
+	case gvar31:
 		goto LABEL4
-	}
-	if v0 == gvar32 {
+	case gvar32:
 		goto LABEL5
-	}
-	if v0 == gvar33 {
+	case gvar33:
 		goto LABEL6
-	}
-	if v0 == gvar34 {
+	case gvar34:
 		goto LABEL7
+	default:
+		goto LABEL8
 	}
-	goto LABEL8
 LABEL2:
 	ns.TellStory(ns.HumanMaleEatFood, "Wiz02:ArchivistSurprise")
 	gvar35 = gvar25
@@ -424,38 +420,30 @@ LABEL8:
 }
 func ArchivistTalkEnd() {
 	var v0 int
-	v0 = gvar35
-	if v0 == gvar25 {
+	switch v0 = gvar35; v0 {
+	case gvar25:
 		goto LABEL1
-	}
-	if v0 == gvar26 {
+	case gvar26:
 		goto LABEL2
-	}
-	if v0 == gvar27 {
+	case gvar27:
 		goto LABEL3
-	}
-	if v0 == gvar28 {
+	case gvar28:
 		goto LABEL4
-	}
-	if v0 == gvar29 {
+	case gvar29:
 		goto LABEL5
-	}
-	if v0 == gvar30 {
+	case gvar30:
 		goto LABEL6
-	}
-	if v0 == gvar31 {
+	case gvar31:
 		goto LABEL7
-	}
-	if v0 == gvar32 {
+	case gvar32:
 		goto LABEL8
-	}
-	if v0 == gvar33 {
+	case gvar33:
 		goto LABEL9
-	}
-	if v0 == gvar34 {
+	case gvar34:
 		goto LABEL10
+	default:
+		goto LABEL11
 	}
-	goto LABEL11
 LABEL1:
 	ns.SetDialog(obj7, ns.NEXT, NecromancerStart, ArchivistTalkEnd)
 	ns.StartDialog(obj7, ns.GetHost())
@@ -533,17 +521,16 @@ LABEL11:
 }
 func NecromancerStart() {
 	var v0 int
-	v0 = gvar35
-	if v0 == gvar25 {
+	switch v0 = gvar35; v0 {
+	case gvar25:
 		goto LABEL1
-	}
-	if v0 == gvar27 {
+	case gvar27:
 		goto LABEL2
-	}
-	if v0 == gvar29 {
+	case gvar29:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "Wiz02:Necromancer01")
 	gvar35 = gvar26
@@ -685,14 +672,14 @@ func ReadyForFirstSwap() {
 }
 func ReadyForFirstReturn() {
 	var v0 int
-	v0 = ivar82
-	if v0 == 30 {
+	switch v0 = ivar82; v0 {
+	case 30:
 		goto LABEL1
-	}
-	if v0 == 150 {
+	case 150:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Chat(obj97, "Wiz02B.scr:LewisTalk04")
 	goto LABEL3
@@ -805,17 +792,16 @@ func ArchivistMadStart() {
 	ns.LookAtObject(obj101, ns.GetHost())
 	flag76 = false
 	flag77 = true
-	v0 = ivar87
-	if v0 == 1 {
+	switch v0 = ivar87; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "Wiz02B.scr:ArchivistTalk02")
 	ivar87 += 1

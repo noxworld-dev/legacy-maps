@@ -117,23 +117,20 @@ func Flame0() {
 		v1 [4]ns.ObjectID
 		v2 int
 	)
-	v2 = gvar15
-	if v2 == gvar4 {
+	switch v2 = gvar15; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	v0 = 0
 	for {
@@ -251,23 +248,20 @@ func Flame1() {
 		v1 [4]ns.ObjectID
 		v2 int
 	)
-	v2 = gvar17
-	if v2 == gvar4 {
+	switch v2 = gvar17; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	v0 = 0
 	for {
@@ -385,23 +379,20 @@ func Flame2() {
 		v1 [4]ns.ObjectID
 		v2 int
 	)
-	v2 = gvar19
-	if v2 == gvar4 {
+	switch v2 = gvar19; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	v0 = 0
 	for {
@@ -519,23 +510,20 @@ func Flame3() {
 		v1 [4]ns.ObjectID
 		v2 int
 	)
-	v2 = gvar21
-	if v2 == gvar4 {
+	switch v2 = gvar21; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	v0 = 0
 	for {
@@ -653,23 +641,20 @@ func Flame4() {
 		v1 [4]ns.ObjectID
 		v2 int
 	)
-	v2 = gvar23
-	if v2 == gvar4 {
+	switch v2 = gvar23; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	v0 = 0
 	for {
@@ -787,23 +772,20 @@ func Flame5() {
 		v1 [4]ns.ObjectID
 		v2 int
 	)
-	v2 = gvar25
-	if v2 == gvar4 {
+	switch v2 = gvar25; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	v0 = 0
 	for {
@@ -921,23 +903,20 @@ func Flame6() {
 		v1 [4]ns.ObjectID
 		v2 int
 	)
-	v2 = gvar27
-	if v2 == gvar4 {
+	switch v2 = gvar27; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	v0 = 0
 	for {
@@ -1055,23 +1034,20 @@ func Flame7() {
 		v1 [4]ns.ObjectID
 		v2 int
 	)
-	v2 = gvar29
-	if v2 == gvar4 {
+	switch v2 = gvar29; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	v0 = 0
 	for {
@@ -1189,23 +1165,20 @@ func Flame8() {
 		v1 [4]ns.ObjectID
 		v2 int
 	)
-	v2 = gvar31
-	if v2 == gvar4 {
+	switch v2 = gvar31; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	v0 = 0
 	for {

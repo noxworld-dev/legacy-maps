@@ -325,20 +325,18 @@ func BarKeepRumor1Start() {
 func BarKeepRumorEnd() {
 	var v0 int
 	ivar110 = ns.Random(1, 4)
-	v0 = ivar110
-	if v0 == 1 {
+	switch v0 = ivar110; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.SetDialog(obj7, ns.NORMAL, BarKeepRumor1Start, BarKeepRumorEnd)
 	goto LABEL5
@@ -366,20 +364,18 @@ func BarKeepRumor4Start() {
 func ChooseMaxRumor() {
 	var v0 int
 	ivar109 = ns.Random(1, 4)
-	v0 = ivar109
-	if v0 == 1 {
+	switch v0 = ivar109; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.SetDialog(obj27, ns.NORMAL, MaxRumor1Start, MaxRumor1End)
 	goto LABEL5
@@ -606,14 +602,14 @@ func Civvy1Start() {
 LABEL1:
 	ivar113 = ns.Random(1, 2)
 LABEL2:
-	v0 = ivar113
-	if v0 == 1 {
+	switch v0 = ivar113; v0 {
+	case 1:
 		goto LABEL3
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	ns.TellStory(ns.HumanMaleEatFood, "Wiz02A.scr:JorganTalk01")
 	goto LABEL5
@@ -667,14 +663,14 @@ func ShariStart() {
 	ns.CreatureIdle(obj40)
 	ns.LookAtObject(obj40, ns.GetHost())
 	ivar111 = ns.Random(1, 2)
-	v0 = ivar111
-	if v0 == 1 {
+	switch v0 = ivar111; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "Wiz02A.scr:MaidenTalk02")
 	goto LABEL3
@@ -695,14 +691,14 @@ func KaylaStart() {
 	ns.CreatureIdle(obj41)
 	ns.LookAtObject(obj41, ns.GetHost())
 	ivar112 = ns.Random(1, 2)
-	v0 = ivar112
-	if v0 == 1 {
+	switch v0 = ivar112; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "Wiz02A.scr:MaidenTalk04")
 	goto LABEL3
@@ -840,8 +836,7 @@ LABEL2:
 	gvar114 = ns.FrameTimer(2, StateEngine)
 }
 func EnemyRun() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

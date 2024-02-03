@@ -105,17 +105,16 @@ func DunMirGuard2TalkEnd() {
 }
 func MineGuardDialogStart() {
 	var v0 int
-	v0 = gvar31
-	if v0 == 1 {
+	switch v0 = gvar31; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.TellStory(ns.DemonRecognize, "Con03A.scr:MineGuardA")
 	goto LABEL5
@@ -132,11 +131,12 @@ LABEL5:
 }
 func MineGuardDialogEnd() {
 	var v0 int
-	v0 = gvar31
-	if v0 == 1 {
+	switch v0 = gvar31; v0 {
+	case 1:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	gvar31 = 2
 	goto LABEL3
@@ -168,17 +168,16 @@ func IxGuard2TalkEnd() {
 func CaptainDialogStart() {
 	var v0 int
 	ns.LookAtObject(obj21, ns.GetHost())
-	v0 = gvar30
-	if v0 == 1 {
+	switch v0 = gvar30; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "Con03A.scr:JandorA")
 	goto LABEL5
@@ -196,17 +195,16 @@ LABEL5:
 }
 func CaptainDialogEnd() {
 	var v0 int
-	v0 = gvar30
-	if v0 == 1 {
+	switch v0 = gvar30; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.JournalEdit(ns.GetHost(), "Con03FindAirshipCap", 4)
 	ns.SetDialog(obj21, ns.NORMAL, CaptainDialogStart, CaptainDialogEnd)
@@ -231,14 +229,14 @@ func InitializeRobbery() {
 func HermitTalkStart() {
 	var v0 int
 	ns.LookAtObject(obj46, ns.GetHost())
-	v0 = gvar54
-	if v0 == gvar50 {
+	switch v0 = gvar54; v0 {
+	case gvar50:
 		goto LABEL1
-	}
-	if v0 == gvar51 {
+	case gvar51:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	if !ns.HasItem(ns.GetHost(), obj48) {
 		goto LABEL4
@@ -266,14 +264,14 @@ LABEL3:
 }
 func HermitTalkEnd() {
 	var v0 int
-	v0 = gvar54
-	if v0 == gvar50 {
+	switch v0 = gvar54; v0 {
+	case gvar50:
 		goto LABEL1
-	}
-	if v0 == gvar52 {
+	case gvar52:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	gvar32 = 1
 	gvar54 = gvar51
@@ -443,8 +441,7 @@ func PlayerDeath() {
 	ns.DeathScreen(3)
 }
 func MonsterGoHome() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

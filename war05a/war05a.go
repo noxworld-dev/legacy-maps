@@ -378,14 +378,14 @@ func SwordsmanStart() {
 	ns.Frozen(obj144, true)
 	ns.CreatureIdle(obj144)
 	ns.LookAtObject(obj144, ns.GetHost())
-	v0 = gvar72
-	if v0 == gvar12 {
+	switch v0 = gvar72; v0 {
+	case gvar12:
 		goto LABEL1
-	}
-	if v0 == gvar13 {
+	case gvar13:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.LookAtObject(obj144, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "War05A.scr:SwordsmanGreeting")
@@ -401,14 +401,14 @@ func SwordsmanEnd() {
 	var v0 int
 	ns.Frozen(obj144, false)
 	ns.CreatureGuard(obj144, ns.GetWaypointX(wp189), ns.GetWaypointY(wp189), ns.GetObjectX(ns.GetHost()), ns.GetObjectY(ns.GetHost()), 240)
-	v0 = gvar72
-	if v0 == gvar12 {
+	switch v0 = gvar72; v0 {
+	case gvar12:
 		goto LABEL1
-	}
-	if v0 == gvar13 {
+	case gvar13:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.FrameTimer(1, SwordsmanTriggerC)
 	gvar72 = gvar13
@@ -432,26 +432,22 @@ func FarmerStart() {
 		v1 float32
 		v2 int
 	)
-	v2 = gvar70
-	if v2 == gvar4 {
+	switch v2 = gvar70; v2 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v2 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v2 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v2 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v2 == gvar8 {
+	case gvar8:
 		goto LABEL5
-	}
-	if v2 == gvar9 {
+	case gvar9:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL1:
 	if !ns.HasItem(ns.GetHost(), obj127) {
 		goto LABEL8
@@ -524,26 +520,22 @@ func FarmerEnd() {
 	v2 = 2
 	v3 = 0
 	v0 = ns.GetAnswer(obj130)
-	v4 = gvar70
-	if v4 == gvar4 {
+	switch v4 = gvar70; v4 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v4 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v4 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v4 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v4 == gvar8 {
+	case gvar8:
 		goto LABEL5
-	}
-	if v4 == gvar9 {
+	case gvar9:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL1:
 	if v0 != v1 {
 		goto LABEL8
@@ -620,14 +612,14 @@ func HoundEnd() {
 }
 func FarmerWifeStart() {
 	var v0 int
-	v0 = gvar71
-	if v0 == gvar10 {
+	switch v0 = gvar71; v0 {
+	case gvar10:
 		goto LABEL1
-	}
-	if v0 == gvar11 {
+	case gvar11:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.LookAtObject(obj132, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "War05A.scr:FarmerWifeGreeting")
@@ -641,14 +633,14 @@ LABEL3:
 }
 func FarmerWifeEnd() {
 	var v0 int
-	v0 = gvar71
-	if v0 == gvar10 {
+	switch v0 = gvar71; v0 {
+	case gvar10:
 		goto LABEL1
-	}
-	if v0 == gvar11 {
+	case gvar11:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	gvar71 = gvar11
 	LetterBoxOff()
@@ -665,20 +657,18 @@ func IngridStart() {
 		v1 float32
 		v2 int
 	)
-	v2 = gvar76
-	if v2 == gvar28 {
+	switch v2 = gvar76; v2 {
+	case gvar28:
 		goto LABEL1
-	}
-	if v2 == gvar29 {
+	case gvar29:
 		goto LABEL2
-	}
-	if v2 == gvar30 {
+	case gvar30:
 		goto LABEL3
-	}
-	if v2 == gvar31 {
+	case gvar31:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War05A.scr:IngridGreeting")
 	goto LABEL5
@@ -709,20 +699,18 @@ LABEL5:
 }
 func IngridEnd() {
 	var v0 int
-	v0 = gvar76
-	if v0 == gvar28 {
+	switch v0 = gvar76; v0 {
+	case gvar28:
 		goto LABEL1
-	}
-	if v0 == gvar29 {
+	case gvar29:
 		goto LABEL2
-	}
-	if v0 == gvar30 {
+	case gvar30:
 		goto LABEL3
-	}
-	if v0 == gvar31 {
+	case gvar31:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	gvar76 = gvar29
 	ns.SetDialog(obj92, ns.NORMAL, IngridStart, IngridEnd)
@@ -740,14 +728,14 @@ LABEL5:
 }
 func CaptainStart() {
 	var v2 int
-	v2 = gvar77
-	if v2 == gvar32 {
+	switch v2 = gvar77; v2 {
+	case gvar32:
 		goto LABEL1
-	}
-	if v2 == gvar33 {
+	case gvar33:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War05A.scr:CaptainGreeting")
 	goto LABEL3
@@ -759,14 +747,14 @@ LABEL3:
 }
 func CaptainEnd() {
 	var v0 int
-	v0 = gvar77
-	if v0 == gvar32 {
+	switch v0 = gvar77; v0 {
+	case gvar32:
 		goto LABEL1
-	}
-	if v0 == gvar33 {
+	case gvar33:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	gvar77 = gvar33
 	ns.StartupScreen(5)
@@ -786,20 +774,18 @@ func MaidenStart() {
 	)
 	_ = v1
 	_ = v0
-	v2 = gvar75
-	if v2 == gvar24 {
+	switch v2 = gvar75; v2 {
+	case gvar24:
 		goto LABEL1
-	}
-	if v2 == gvar25 {
+	case gvar25:
 		goto LABEL2
-	}
-	if v2 == gvar26 {
+	case gvar26:
 		goto LABEL3
-	}
-	if v2 == gvar27 {
+	case gvar27:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	if !ns.HasItem(ns.GetHost(), obj129) {
 		goto LABEL6
@@ -851,20 +837,18 @@ func MaidenEnd() {
 	v2 = 2
 	v3 = 0
 	v0 = ns.GetAnswer(obj128)
-	v4 = gvar75
-	if v4 == gvar24 {
+	switch v4 = gvar75; v4 {
+	case gvar24:
 		goto LABEL1
-	}
-	if v4 == gvar25 {
+	case gvar25:
 		goto LABEL2
-	}
-	if v4 == gvar26 {
+	case gvar26:
 		goto LABEL3
-	}
-	if v4 == gvar27 {
+	case gvar27:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	if v0 != 1 {
 		goto LABEL6
@@ -1052,20 +1036,18 @@ func EndCurse5() {
 }
 func FrogStart() {
 	var v0 int
-	v0 = gvar73
-	if v0 == gvar20 {
+	switch v0 = gvar73; v0 {
+	case gvar20:
 		goto LABEL1
-	}
-	if v0 == gvar21 {
+	case gvar21:
 		goto LABEL2
-	}
-	if v0 == gvar22 {
+	case gvar22:
 		goto LABEL3
-	}
-	if v0 == gvar23 {
+	case gvar23:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.LookAtObject(obj134, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "War05A.scr:FrogGreeting")
@@ -1093,20 +1075,18 @@ LABEL5:
 }
 func FrogEnd() {
 	var v0 int
-	v0 = gvar73
-	if v0 == gvar20 {
+	switch v0 = gvar73; v0 {
+	case gvar20:
 		goto LABEL1
-	}
-	if v0 == gvar21 {
+	case gvar21:
 		goto LABEL2
-	}
-	if v0 == gvar22 {
+	case gvar22:
 		goto LABEL3
-	}
-	if v0 == gvar23 {
+	case gvar23:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	gvar73 = gvar21
 	goto LABEL5
@@ -1188,26 +1168,22 @@ func SadVillagerStart() {
 	)
 	_ = v1
 	_ = v0
-	v2 = gvar74
-	if v2 == gvar14 {
+	switch v2 = gvar74; v2 {
+	case gvar14:
 		goto LABEL1
-	}
-	if v2 == gvar15 {
+	case gvar15:
 		goto LABEL2
-	}
-	if v2 == gvar16 {
+	case gvar16:
 		goto LABEL3
-	}
-	if v2 == gvar17 {
+	case gvar17:
 		goto LABEL4
-	}
-	if v2 == gvar18 {
+	case gvar18:
 		goto LABEL5
-	}
-	if v2 == gvar19 {
+	case gvar19:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL1:
 	ns.CreatureIdle(obj133)
 	ns.LookAtObject(obj133, ns.GetHost())
@@ -1263,26 +1239,22 @@ func SadVillagerEnd() {
 	v2 = 2
 	v3 = 0
 	v0 = ns.GetAnswer(obj133)
-	v4 = gvar74
-	if v4 == gvar14 {
+	switch v4 = gvar74; v4 {
+	case gvar14:
 		goto LABEL1
-	}
-	if v4 == gvar15 {
+	case gvar15:
 		goto LABEL2
-	}
-	if v4 == gvar16 {
+	case gvar16:
 		goto LABEL3
-	}
-	if v4 == gvar17 {
+	case gvar17:
 		goto LABEL4
-	}
-	if v4 == gvar18 {
+	case gvar18:
 		goto LABEL5
-	}
-	if v4 == gvar19 {
+	case gvar19:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL1:
 	v0 = 1
 	if 1 == 0 {
@@ -1839,8 +1811,7 @@ func MapInitialize() {
 	ShopKeeperGuard()
 }
 func KeepOut() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -1992,8 +1963,7 @@ func UnfreezeAll() {
 	ns.CreatureFollow(obj51, obj130)
 }
 func GoAway() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	if !(ns.CurrentHealth(ns.GetCaller()) > 0) {
@@ -2019,20 +1989,18 @@ func WoundedRefugeeStart() {
 		v1 float32
 		v2 int
 	)
-	v2 = gvar234
-	if v2 == gvar230 {
+	switch v2 = gvar234; v2 {
+	case gvar230:
 		goto LABEL1
-	}
-	if v2 == gvar231 {
+	case gvar231:
 		goto LABEL2
-	}
-	if v2 == gvar232 {
+	case gvar232:
 		goto LABEL3
-	}
-	if v2 == gvar233 {
+	case gvar233:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War05A:WoundedRefugeeGreeting")
 	goto LABEL5
@@ -2065,20 +2033,18 @@ LABEL5:
 }
 func WoundedRefugeeEnd() {
 	var v0 int
-	v0 = gvar234
-	if v0 == gvar230 {
+	switch v0 = gvar234; v0 {
+	case gvar230:
 		goto LABEL1
-	}
-	if v0 == gvar231 {
+	case gvar231:
 		goto LABEL2
-	}
-	if v0 == gvar232 {
+	case gvar232:
 		goto LABEL3
-	}
-	if v0 == gvar233 {
+	case gvar233:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	gvar234 = gvar231
 	goto LABEL5

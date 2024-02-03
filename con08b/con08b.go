@@ -114,8 +114,7 @@ func LeaveTemple() {
 	ns.FrameTimer(60, LeaveTempleSEG2)
 }
 func StayAway() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -123,8 +122,7 @@ LABEL1:
 	return
 }
 func NoMonsters() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -155,20 +153,18 @@ func PriestSetPieceSEG3() {
 }
 func PriestDialogStart() {
 	var v0 int
-	v0 = gvar19
-	if v0 == gvar15 {
+	switch v0 = gvar19; v0 {
+	case gvar15:
 		goto LABEL1
-	}
-	if v0 == gvar16 {
+	case gvar16:
 		goto LABEL2
-	}
-	if v0 == gvar17 {
+	case gvar17:
 		goto LABEL3
-	}
-	if v0 == gvar18 {
+	case gvar18:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "Con08a:PriestGreet")
 	goto LABEL5
@@ -186,20 +182,18 @@ LABEL5:
 }
 func PriestDialogEnd() {
 	var v0 int
-	v0 = gvar19
-	if v0 == gvar15 {
+	switch v0 = gvar19; v0 {
+	case gvar15:
 		goto LABEL1
-	}
-	if v0 == gvar16 {
+	case gvar16:
 		goto LABEL2
-	}
-	if v0 == gvar17 {
+	case gvar17:
 		goto LABEL3
-	}
-	if v0 == gvar18 {
+	case gvar18:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	gvar19 = gvar16
 	PriestDialogStart()

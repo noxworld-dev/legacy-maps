@@ -109,14 +109,14 @@ func ProtectTheKing() {
 }
 func KingStart() {
 	var v0 int
-	v0 = gvar20
-	if v0 == gvar17 {
+	switch v0 = gvar20; v0 {
+	case gvar17:
 		goto LABEL1
-	}
-	if v0 == gvar18 {
+	case gvar18:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "Con05:OgreTalk07")
 	ns.LookAtObject(obj31, ns.GetHost())
@@ -130,14 +130,14 @@ LABEL3:
 }
 func KingEnd() {
 	var v0 int
-	v0 = gvar20
-	if v0 == gvar17 {
+	switch v0 = gvar20; v0 {
+	case gvar17:
 		goto LABEL1
-	}
-	if v0 == gvar18 {
+	case gvar18:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	gvar20 = gvar18
 	ns.StartDialog(obj31, ns.GetHost())
@@ -152,20 +152,18 @@ LABEL3:
 }
 func HorvathStart() {
 	var v0 int
-	v0 = gvar19
-	if v0 == gvar13 {
+	switch v0 = gvar19; v0 {
+	case gvar13:
 		goto LABEL1
-	}
-	if v0 == gvar14 {
+	case gvar14:
 		goto LABEL2
-	}
-	if v0 == gvar15 {
+	case gvar15:
 		goto LABEL3
-	}
-	if v0 == gvar16 {
+	case gvar16:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.DestroyChat(obj24)
 	ns.Frozen(obj24, true)
@@ -194,20 +192,18 @@ LABEL5:
 }
 func HorvathEnd() {
 	var v0 int
-	v0 = gvar19
-	if v0 == gvar13 {
+	switch v0 = gvar19; v0 {
+	case gvar13:
 		goto LABEL1
-	}
-	if v0 == gvar14 {
+	case gvar14:
 		goto LABEL2
-	}
-	if v0 == gvar15 {
+	case gvar15:
 		goto LABEL3
-	}
-	if v0 == gvar16 {
+	case gvar16:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	gvar19 = gvar14
 	ns.Frozen(obj24, false)

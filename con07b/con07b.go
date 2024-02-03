@@ -238,20 +238,18 @@ func CivvyBump() {
 		goto LABEL1
 	}
 	ivar44 = ns.Random(1, 4)
-	v0 = ivar44
-	if v0 == 1 {
+	switch v0 = ivar44; v0 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL2:
 	ns.Chat(ns.GetTrigger(), "Wiz02A.scr:CivvyTalk01")
 	goto LABEL6
@@ -284,14 +282,14 @@ func MakeAWish() {
 }
 func MaxDialogStart() {
 	var v0 int
-	v0 = gvar53
-	if v0 == gvar47 {
+	switch v0 = gvar53; v0 {
+	case gvar47:
 		goto LABEL1
-	}
-	if v0 == gvar48 {
+	case gvar48:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "War07A.scr:MaxOffer01")
 	goto LABEL3
@@ -316,17 +314,16 @@ func MaxDialogEnd() {
 	v3 = 2
 	v4 = 0
 	v0 = ns.GetAnswer(obj28)
-	v5 = v0
-	if v5 == v4 {
+	switch v5 = v0; v5 {
+	case v4:
 		goto LABEL1
-	}
-	if v5 == v3 {
+	case v3:
 		goto LABEL2
-	}
-	if v5 == v2 {
+	case v2:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	gvar53 = gvar48
 	ResetMaxDialog()
@@ -400,8 +397,7 @@ func WardenTalkEnd() {
 	ns.SetDialog(obj23, ns.NORMAL, WardenTalkStart, WardenTalkEnd)
 }
 func GoAway() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

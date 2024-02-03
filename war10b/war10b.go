@@ -237,14 +237,14 @@ func BlockAGotoC() {
 }
 func BlockAGo() {
 	var v0 int
-	v0 = gvar43
-	if v0 == gvar41 {
+	switch v0 = gvar43; v0 {
+	case gvar41:
 		goto LABEL1
-	}
-	if v0 == gvar42 {
+	case gvar42:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	BlockAGotoB()
 	goto LABEL3
@@ -276,14 +276,14 @@ func BlockBGotoC() {
 }
 func BlockBGo() {
 	var v0 int
-	v0 = gvar61
-	if v0 == gvar59 {
+	switch v0 = gvar61; v0 {
+	case gvar59:
 		goto LABEL1
-	}
-	if v0 == gvar60 {
+	case gvar60:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	BlockBGotoB()
 	goto LABEL3
@@ -311,14 +311,14 @@ func BlockCGotoC() {
 }
 func BlockCGo() {
 	var v0 int
-	v0 = gvar73
-	if v0 == gvar71 {
+	switch v0 = gvar73; v0 {
+	case gvar71:
 		goto LABEL1
-	}
-	if v0 == gvar72 {
+	case gvar72:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	BlockCGotoB()
 	goto LABEL3

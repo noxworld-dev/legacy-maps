@@ -199,20 +199,18 @@ func init() {
 }
 func JandorStart() {
 	var v0 int
-	v0 = gvar41
-	if v0 == gvar4 {
+	switch v0 = gvar41; v0 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v0 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v0 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v0 == gvar7 {
+	case gvar7:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "War08a:CaptainProd")
 	goto LABEL5
@@ -232,20 +230,18 @@ LABEL5:
 }
 func JandorEnd() {
 	var v0 int
-	v0 = gvar41
-	if v0 == gvar4 {
+	switch v0 = gvar41; v0 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v0 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v0 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v0 == gvar7 {
+	case gvar7:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.JournalEntry(ns.GetHost(), "Chapter8LocateAldwyn", 2)
 	ns.PrintToAll("Con01a:NewJournalEntry")
@@ -270,30 +266,28 @@ func JacobDialogStart() {
 		v1 int
 		v2 int
 	)
-	v2 = gvar40
-	if v2 == gvar27 {
+	switch v2 = gvar40; v2 {
+	case gvar27:
 		goto LABEL1
-	}
-	if v2 == gvar28 {
+	case gvar28:
 		goto LABEL2
-	}
-	if v2 == gvar29 {
+	case gvar29:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	v0 = ns.Random(1, 3)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL5
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL6
-	}
-	if v1 == 3 {
+	case 3:
 		goto LABEL7
+	default:
+		goto LABEL8
 	}
-	goto LABEL8
 LABEL5:
 	ns.TellStory(ns.HumanMaleEatFood, "Con02A:JailerTalk01")
 	goto LABEL8
@@ -316,17 +310,16 @@ LABEL4:
 }
 func JacobDialogEnd() {
 	var v0 int
-	v0 = gvar40
-	if v0 == gvar28 {
+	switch v0 = gvar40; v0 {
+	case gvar28:
 		goto LABEL1
-	}
-	if v0 == gvar29 {
+	case gvar29:
 		goto LABEL2
-	}
-	if v0 == gvar30 {
+	case gvar30:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.Frozen(ns.GetHost(), false)
 	flag46 = false
@@ -364,17 +357,16 @@ func MorganInjured() {
 	}
 	flag46 = true
 	ivar45 += 1
-	v0 = ivar45
-	if v0 == 1 {
+	switch v0 = ivar45; v0 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
+	default:
+		goto LABEL1
 	}
-	goto LABEL1
 LABEL2:
 	gvar40 = gvar28
 	ns.Frozen(ns.GetHost(), true)
@@ -426,17 +418,16 @@ LABEL1:
 }
 func HenrickDialogStart() {
 	var v0 int
-	v0 = gvar32
-	if v0 == gvar11 {
+	switch v0 = gvar32; v0 {
+	case gvar11:
 		goto LABEL1
-	}
-	if v0 == gvar12 {
+	case gvar12:
 		goto LABEL2
-	}
-	if v0 == gvar13 {
+	case gvar13:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.LookAtObject(obj48, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "War08b:HenrickSalesPitchA")
@@ -468,30 +459,28 @@ func HenrickDialogEnd() {
 	v2 = 1
 	v3 = 2
 	v4 = 0
-	v7 = gvar32
-	if v7 == gvar11 {
+	switch v7 = gvar32; v7 {
+	case gvar11:
 		goto LABEL1
-	}
-	if v7 == gvar12 {
+	case gvar12:
 		goto LABEL2
-	}
-	if v7 == gvar13 {
+	case gvar13:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	v1 = ns.GetAnswer(obj48)
-	v5 = v1
-	if v5 == v2 {
+	switch v5 = v1; v5 {
+	case v2:
 		goto LABEL5
-	}
-	if v5 == v3 {
+	case v3:
 		goto LABEL6
-	}
-	if v5 == v4 {
+	case v4:
 		goto LABEL7
+	default:
+		goto LABEL8
 	}
-	goto LABEL8
 LABEL5:
 	v0 = ns.GetGold(ns.GetHost())
 	if !(v0 < ivar42) {
@@ -517,17 +506,16 @@ LABEL8:
 	goto LABEL4
 LABEL2:
 	v1 = ns.GetAnswer(obj48)
-	v6 = v1
-	if v6 == v2 {
+	switch v6 = v1; v6 {
+	case v2:
 		goto LABEL11
-	}
-	if v6 == v3 {
+	case v3:
 		goto LABEL12
-	}
-	if v6 == v4 {
+	case v4:
 		goto LABEL13
+	default:
+		goto LABEL14
 	}
-	goto LABEL14
 LABEL11:
 	v0 = ns.GetGold(ns.GetHost())
 	if !(v0 < ivar42) {
@@ -572,11 +560,12 @@ func DrunkDialogEnd() {
 func GatekeeperDialogStart() {
 	var v0 int
 	ns.LookAtObject(obj52, ns.GetHost())
-	v0 = gvar36
-	if v0 == gvar23 {
+	switch v0 = gvar36; v0 {
+	case gvar23:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "Con02a:GatekeeperWaiting")
 	goto LABEL2
@@ -588,11 +577,12 @@ func GatekeeperDialogEnd() {
 func Gatekeeper2DialogStart() {
 	var v0 int
 	ns.LookAtObject(obj63, ns.GetHost())
-	v0 = gvar37
-	if v0 == gvar24 {
+	switch v0 = gvar37; v0 {
+	case gvar24:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "Wiz08a:Guard01Greet")
 	goto LABEL2
@@ -604,11 +594,12 @@ func Gatekeeper2DialogEnd() {
 func Gatekeeper3DialogStart() {
 	var v0 int
 	ns.LookAtObject(obj64, ns.GetHost())
-	v0 = gvar38
-	if v0 == gvar25 {
+	switch v0 = gvar38; v0 {
+	case gvar25:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War08a:Guard02Greet")
 	goto LABEL2
@@ -626,14 +617,14 @@ func MayorDialogStart() {
 	ns.CreatureIdle(ns.GetHost())
 	ns.LookAtObject(ns.GetHost(), obj55)
 	v0 = ns.Random(1, 2)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL1
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War03b:MayorPre")
 	goto LABEL3
@@ -648,11 +639,12 @@ func MayorDialogEnd() {
 }
 func MayorsGuardDialogStart() {
 	var v0 int
-	v0 = gvar31
-	if v0 == gvar14 {
+	switch v0 = gvar31; v0 {
+	case gvar14:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	ns.LookAtObject(obj53, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "War03b:MayorsGuardIntro")
@@ -664,17 +656,16 @@ func MayorsGuardDialogEnd() {
 }
 func AldwinDialogStart() {
 	var v0 int
-	v0 = gvar33
-	if v0 == gvar8 {
+	switch v0 = gvar33; v0 {
+	case gvar8:
 		goto LABEL1
-	}
-	if v0 == gvar9 {
+	case gvar9:
 		goto LABEL2
-	}
-	if v0 == gvar10 {
+	case gvar10:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.LookAtObject(obj54, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "War08a:AldwynGreet")
@@ -692,17 +683,16 @@ LABEL4:
 }
 func AldwinDialogEnd() {
 	var v0 int
-	v0 = gvar33
-	if v0 == gvar8 {
+	switch v0 = gvar33; v0 {
+	case gvar8:
 		goto LABEL1
-	}
-	if v0 == gvar9 {
+	case gvar9:
 		goto LABEL2
-	}
-	if v0 == gvar10 {
+	case gvar10:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.Pickup(ns.GetHost(), obj50)
 	ns.PrintToAll("GeneralPrint:GainedKey")
@@ -722,11 +712,12 @@ LABEL4:
 }
 func BridgeGuardDialogStart() {
 	var v0 int
-	v0 = gvar39
-	if v0 == gvar26 {
+	switch v0 = gvar39; v0 {
+	case gvar26:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	ns.LookAtObject(obj65, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "Con02a:RandomSay")
@@ -736,11 +727,12 @@ LABEL2:
 }
 func BridgeGuardDialogEnd() {
 	var v0 int
-	v0 = gvar39
-	if v0 == gvar26 {
+	switch v0 = gvar39; v0 {
+	case gvar26:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	goto LABEL2
 LABEL2:
@@ -792,14 +784,14 @@ func Maiden4DialogStart() {
 	ns.LookAtObject(ns.GetHost(), obj70)
 	ns.LookAtObject(obj70, ns.GetHost())
 	v0 = ns.Random(1, 2)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL1
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "War02a:NewTownswoman1")
 	goto LABEL3
@@ -858,20 +850,18 @@ func Townsman3DialogEnd() {
 }
 func ReleaseCharmedWolf(a1 int) {
 	var v0 int
-	v0 = a1
-	if v0 == 0 {
+	switch v0 = a1; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.WallOpen(ns.Wall(128, 106))
 	ns.EnchantOff(obj120[a1], ns.ENCHANT_INVULNERABLE)
@@ -1011,29 +1001,24 @@ func InversionOwnObject() {
 }
 func TeacherStart() {
 	var v0 int
-	v0 = gvar97
-	if v0 == gvar90 {
+	switch v0 = gvar97; v0 {
+	case gvar90:
 		goto LABEL1
-	}
-	if v0 == gvar91 {
+	case gvar91:
 		goto LABEL2
-	}
-	if v0 == gvar92 {
+	case gvar92:
 		goto LABEL3
-	}
-	if v0 == gvar93 {
+	case gvar93:
 		goto LABEL4
-	}
-	if v0 == gvar94 {
+	case gvar94:
 		goto LABEL5
-	}
-	if v0 == gvar95 {
+	case gvar95:
 		goto LABEL6
-	}
-	if v0 == gvar96 {
+	case gvar96:
 		goto LABEL7
+	default:
+		goto LABEL8
 	}
-	goto LABEL8
 LABEL1:
 	ns.Frozen(ns.GetHost(), true)
 	ns.CreatureIdle(ns.GetHost())
@@ -1076,42 +1061,36 @@ func TeacherEnd() {
 	v2 = 1
 	v3 = 2
 	v4 = 0
-	v6 = gvar97
-	if v6 == gvar90 {
+	switch v6 = gvar97; v6 {
+	case gvar90:
 		goto LABEL1
-	}
-	if v6 == gvar91 {
+	case gvar91:
 		goto LABEL2
-	}
-	if v6 == gvar92 {
+	case gvar92:
 		goto LABEL3
-	}
-	if v6 == gvar93 {
+	case gvar93:
 		goto LABEL4
-	}
-	if v6 == gvar94 {
+	case gvar94:
 		goto LABEL5
-	}
-	if v6 == gvar95 {
+	case gvar95:
 		goto LABEL6
-	}
-	if v6 == gvar96 {
+	case gvar96:
 		goto LABEL7
+	default:
+		goto LABEL8
 	}
-	goto LABEL8
 LABEL1:
 	v1 = ns.GetAnswer(obj82)
-	v5 = v1
-	if v5 == v2 {
+	switch v5 = v1; v5 {
+	case v2:
 		goto LABEL9
-	}
-	if v5 == v3 {
+	case v3:
 		goto LABEL10
-	}
-	if v5 == v4 {
+	case v4:
 		goto LABEL11
+	default:
+		goto LABEL12
 	}
-	goto LABEL12
 LABEL9:
 	v0 = ns.GetGold(ns.GetHost())
 	if !(v0 < 100) {

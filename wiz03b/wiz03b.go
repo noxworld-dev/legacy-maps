@@ -301,8 +301,7 @@ func OpenRogueSecretWallGroup() {
 	ns.WallGroupOpen(gvar52)
 }
 func MonsterGoHome() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

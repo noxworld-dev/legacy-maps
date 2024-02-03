@@ -513,8 +513,7 @@ func PlaySubMusic() {
 	ns.Music(20, 100)
 }
 func MonsterGoHome() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

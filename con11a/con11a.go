@@ -175,23 +175,20 @@ func HecubahDie4() {
 }
 func HecubahDialogStart() {
 	var v0 int
-	v0 = gvar48
-	if v0 == gvar4 {
+	switch v0 = gvar48; v0 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v0 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v0 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v0 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v0 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	ns.LookAtObject(obj9, ns.GetHost())
 	ns.LookAtObject(ns.GetHost(), obj9)
@@ -219,23 +216,20 @@ LABEL6:
 }
 func HecubahDialogEnd() {
 	var v0 int
-	v0 = gvar48
-	if v0 == gvar4 {
+	switch v0 = gvar48; v0 {
+	case gvar4:
 		goto LABEL1
-	}
-	if v0 == gvar5 {
+	case gvar5:
 		goto LABEL2
-	}
-	if v0 == gvar6 {
+	case gvar6:
 		goto LABEL3
-	}
-	if v0 == gvar7 {
+	case gvar7:
 		goto LABEL4
-	}
-	if v0 == gvar8 {
+	case gvar8:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	gvar48 = gvar5
 	ns.SetDialog(obj9, ns.NORMAL, HecubahDialogStart, HecubahDialogEnd)

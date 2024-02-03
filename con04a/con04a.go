@@ -51,14 +51,14 @@ func CloseBlockTrap02() {
 }
 func BlockTrapLoop() {
 	var v0 int
-	v0 = gvar6
-	if v0 == 1 {
+	switch v0 = gvar6; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	CloseBlockTrap01()
 	gvar6 = 2
@@ -85,14 +85,14 @@ func InitializeBlockTrap() {
 }
 func BlockTrapBoom(a1 int) {
 	var v0 int
-	v0 = a1
-	if v0 == 1 {
+	switch v0 = a1; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.AudioEvent(ns.HammerMissing, wp14)
 	ns.Effect(ns.JIGGLE, ns.GetWaypointX(wp14), ns.GetWaypointY(wp14), fvar7, 0)
@@ -106,14 +106,14 @@ LABEL3:
 }
 func ResetBlockTrap(a1 int) {
 	var v0 int
-	v0 = a1
-	if v0 == 1 {
+	switch v0 = a1; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.ObjectOn(obj12)
 	ns.AudioEvent(ns.TriggerReleased, wp14)
@@ -130,14 +130,14 @@ func PlayerDeath() {
 }
 func CaptainDialogStart() {
 	var v0 int
-	v0 = gvar20
-	if v0 == gvar18 {
+	switch v0 = gvar20; v0 {
+	case gvar18:
 		goto LABEL1
-	}
-	if v0 == gvar19 {
+	case gvar19:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "Con04a:CaptainGreet")
 	goto LABEL3
@@ -149,14 +149,14 @@ LABEL3:
 }
 func CaptainDialogEnd() {
 	var v0 int
-	v0 = gvar20
-	if v0 == gvar18 {
+	switch v0 = gvar20; v0 {
+	case gvar18:
 		goto LABEL1
-	}
-	if v0 == gvar19 {
+	case gvar19:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.JournalEntry(ns.GetHost(), "Chapter4SearchCrypts", 2)
 	ns.PrintToAll("Con01a:NewJournalEntry")

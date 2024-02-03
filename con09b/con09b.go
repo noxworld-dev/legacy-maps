@@ -110,23 +110,20 @@ func PlayerDeath() {
 }
 func AidanDialogStart() {
 	var v0 int
-	v0 = gvar63
-	if v0 == gvar55 {
+	switch v0 = gvar63; v0 {
+	case gvar55:
 		goto LABEL1
-	}
-	if v0 == gvar56 {
+	case gvar56:
 		goto LABEL2
-	}
-	if v0 == gvar57 {
+	case gvar57:
 		goto LABEL3
-	}
-	if v0 == gvar58 {
+	case gvar58:
 		goto LABEL4
-	}
-	if v0 == gvar59 {
+	case gvar59:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	ns.DestroyChat(obj4)
 	ns.TellStory(ns.SwordsmanHurt, "War09a:AidanGreet1")
@@ -151,23 +148,20 @@ LABEL6:
 }
 func AidanDialogEnd() {
 	var v0 int
-	v0 = gvar63
-	if v0 == gvar55 {
+	switch v0 = gvar63; v0 {
+	case gvar55:
 		goto LABEL1
-	}
-	if v0 == gvar56 {
+	case gvar56:
 		goto LABEL2
-	}
-	if v0 == gvar57 {
+	case gvar57:
 		goto LABEL3
-	}
-	if v0 == gvar58 {
+	case gvar58:
 		goto LABEL4
-	}
-	if v0 == gvar59 {
+	case gvar59:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	gvar63 = gvar56
 	goto LABEL6
@@ -288,8 +282,7 @@ LABEL1:
 	return
 }
 func KeepOut() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -641,17 +634,16 @@ func WispAction(a1 int) {
 		v0 float32
 		v1 int
 	)
-	v1 = gvar79[a1]
-	if v1 == gvar70 {
+	switch v1 = gvar79[a1]; v1 {
+	case gvar70:
 		goto LABEL1
-	}
-	if v1 == gvar72 {
+	case gvar72:
 		goto LABEL2
-	}
-	if v1 == gvar71 {
+	case gvar71:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	v0 = ns.Distance(ns.GetObjectX(obj77[a1]), ns.GetObjectY(obj77[a1]), ns.GetObjectX(ns.GetHost()), ns.GetObjectY(ns.GetHost()))
 	if !(v0 < 70) {
@@ -700,14 +692,14 @@ LABEL1:
 	}
 	return
 LABEL2:
-	v1 = gvar79[v0]
-	if v1 == gvar69 {
+	switch v1 = gvar79[v0]; v1 {
+	case gvar69:
 		goto LABEL3
-	}
-	if v1 == gvar72 {
+	case gvar72:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	gvar79[v0] = gvar70
 	ns.CreatureFollow(ns.GetTrigger(), ns.GetCaller())
@@ -736,11 +728,12 @@ LABEL1:
 	}
 	return
 LABEL2:
-	v1 = gvar79[v0]
-	if v1 == gvar71 {
+	switch v1 = gvar79[v0]; v1 {
+	case gvar71:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL3:
 	gvar79[v0] = gvar72
 	ivar80[v0] = 0

@@ -37,8 +37,7 @@ func MapInitialize() {
 	ns.FrameTimer(45, DisableElevators)
 }
 func NoEnemys() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

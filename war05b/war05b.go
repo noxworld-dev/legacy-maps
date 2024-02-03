@@ -158,14 +158,14 @@ func ProtectTheKing() {
 }
 func KingStart() {
 	var v0 int
-	v0 = gvar24
-	if v0 == gvar19 {
+	switch v0 = gvar24; v0 {
+	case gvar19:
 		goto LABEL1
-	}
-	if v0 == gvar20 {
+	case gvar20:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "Con05:OgreTalk07")
 	ns.LookAtObject(obj45, ns.GetHost())
@@ -179,14 +179,14 @@ LABEL3:
 }
 func KingEnd() {
 	var v0 int
-	v0 = gvar24
-	if v0 == gvar19 {
+	switch v0 = gvar24; v0 {
+	case gvar19:
 		goto LABEL1
-	}
-	if v0 == gvar20 {
+	case gvar20:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	gvar24 = gvar20
 	ns.StartDialog(obj45, ns.GetHost())
@@ -201,14 +201,14 @@ LABEL3:
 }
 func CaptainStart() {
 	var v0 int
-	v0 = gvar21
-	if v0 == gvar12 {
+	switch v0 = gvar21; v0 {
+	case gvar12:
 		goto LABEL1
-	}
-	if v0 == gvar13 {
+	case gvar13:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.LookAtObject(obj37, ns.GetHost())
 	ns.LookAtObject(ns.GetHost(), obj37)
@@ -224,14 +224,14 @@ LABEL3:
 }
 func CaptainEnd() {
 	var v0 int
-	v0 = gvar21
-	if v0 == gvar12 {
+	switch v0 = gvar21; v0 {
+	case gvar12:
 		goto LABEL1
-	}
-	if v0 == gvar13 {
+	case gvar13:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	goto LABEL3
 LABEL2:
@@ -255,14 +255,14 @@ func PlayerDeath() {
 }
 func MaidenStart() {
 	var v0 int
-	v0 = gvar22
-	if v0 == gvar14 {
+	switch v0 = gvar22; v0 {
+	case gvar14:
 		goto LABEL1
-	}
-	if v0 == gvar15 {
+	case gvar15:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War05B.scr:MaidenFollowing")
 	goto LABEL3
@@ -274,14 +274,14 @@ LABEL3:
 }
 func MaidenEnd() {
 	var v0 int
-	v0 = gvar22
-	if v0 == gvar14 {
+	switch v0 = gvar22; v0 {
+	case gvar14:
 		goto LABEL1
-	}
-	if v0 == gvar15 {
+	case gvar15:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	goto LABEL3
 LABEL2:
@@ -310,17 +310,16 @@ func RescueMaidens() {
 }
 func SisterStart() {
 	var v0 int
-	v0 = gvar23
-	if v0 == gvar16 {
+	switch v0 = gvar23; v0 {
+	case gvar16:
 		goto LABEL1
-	}
-	if v0 == gvar17 {
+	case gvar17:
 		goto LABEL2
-	}
-	if v0 == gvar18 {
+	case gvar18:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.LookAtObject(obj29, ns.GetHost())
 	ns.LookAtObject(ns.GetHost(), obj29)
@@ -341,17 +340,16 @@ LABEL4:
 }
 func SisterEnd() {
 	var v0 int
-	v0 = gvar23
-	if v0 == gvar16 {
+	switch v0 = gvar23; v0 {
+	case gvar16:
 		goto LABEL1
-	}
-	if v0 == gvar17 {
+	case gvar17:
 		goto LABEL2
-	}
-	if v0 == gvar18 {
+	case gvar18:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	LetterBoxOff()
 	ns.Frozen(ns.GetHost(), false)
@@ -475,8 +473,7 @@ func MapInitialize() {
 	ns.LockDoor(obj7)
 }
 func KeepOut() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -595,8 +592,7 @@ LABEL4:
 	ns.CancelDialog(obj29)
 	ivar25 += 1
 LABEL5:
-	r26 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r26 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL6
 	}
 	ns.GoBackHome(ns.GetCaller())

@@ -92,17 +92,16 @@ func FlamesCreate() {
 		if !(v0 < 70) {
 			goto LABEL1
 		}
-		v1 = v0 % 3
-		if v1 == 0 {
+		switch v1 = v0 % 3; v1 {
+		case 0:
 			goto LABEL2
-		}
-		if v1 == 1 {
+		case 1:
 			goto LABEL3
-		}
-		if v1 == 2 {
+		case 2:
 			goto LABEL4
+		default:
+			goto LABEL5
 		}
-		goto LABEL5
 	LABEL2:
 		ns.CreateObject("MediumFlame", wp6[v0])
 		goto LABEL5
@@ -128,20 +127,18 @@ func HorvathTalkStart() {
 	}
 	gvar22 = gvar21
 LABEL1:
-	v0 = gvar22
-	if v0 == gvar18 {
+	switch v0 = gvar22; v0 {
+	case gvar18:
 		goto LABEL2
-	}
-	if v0 == gvar19 {
+	case gvar19:
 		goto LABEL3
-	}
-	if v0 == gvar20 {
+	case gvar20:
 		goto LABEL4
-	}
-	if v0 == gvar21 {
+	case gvar21:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL2:
 	ns.TellStory(ns.SwordsmanHurt, "Wiz03a:HorvathIntro")
 	goto LABEL6
@@ -162,17 +159,16 @@ LABEL6:
 }
 func HorvathTalkEnd() {
 	var v0 int
-	v0 = gvar22
-	if v0 == gvar18 {
+	switch v0 = gvar22; v0 {
+	case gvar18:
 		goto LABEL1
-	}
-	if v0 == gvar19 {
+	case gvar19:
 		goto LABEL2
-	}
-	if v0 == gvar21 {
+	case gvar21:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.ObjectOn(obj16)
 	ns.JournalEntry(ns.GetHost(), "Wiz03aGetAmulet", 2)
@@ -258,11 +254,12 @@ LABEL2:
 }
 func BrennethTalkStart() {
 	var v0 int
-	v0 = gvar42
-	if v0 == gvar41 {
+	switch v0 = gvar42; v0 {
+	case gvar41:
 		goto LABEL1
+	default:
+		goto LABEL2
 	}
-	goto LABEL2
 LABEL1:
 	ns.LookAtObject(obj35, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "Wiz03a:BrennethEnd")
@@ -272,14 +269,14 @@ LABEL2:
 }
 func BrennethTalkEnd() {
 	var v0 int
-	v0 = gvar42
-	if v0 == gvar40 {
+	switch v0 = gvar42; v0 {
+	case gvar40:
 		goto LABEL1
-	}
-	if v0 == gvar41 {
+	case gvar41:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Move(obj35, wp39)
 	ns.CreatureGuard(obj35, 4938, 1032, 4923, 1078, 500)
@@ -399,8 +396,7 @@ func DisableElevator() {
 	BrennethSpeaks()
 }
 func MonsterGoHome() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

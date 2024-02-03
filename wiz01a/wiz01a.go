@@ -221,8 +221,7 @@ func ScriptInit() {
 	wp85 = ns.Waypoint("HorvathAttackWP")
 }
 func GoAway() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -336,23 +335,20 @@ func HorvathArrivesAtGate() {
 }
 func SetHorvathDialog() {
 	var v0 int
-	v0 = gvar60
-	if v0 == gvar55 {
+	switch v0 = gvar60; v0 {
+	case gvar55:
 		goto LABEL1
-	}
-	if v0 == gvar56 {
+	case gvar56:
 		goto LABEL2
-	}
-	if v0 == gvar57 {
+	case gvar57:
 		goto LABEL3
-	}
-	if v0 == gvar58 {
+	case gvar58:
 		goto LABEL4
-	}
-	if v0 == gvar59 {
+	case gvar59:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	ns.SetDialog(obj5, ns.NORMAL, HorvathIntroStart, HorvathIntroEnd)
 	goto LABEL6
@@ -612,8 +608,7 @@ LABEL1:
 	return
 }
 func UrchinAway() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

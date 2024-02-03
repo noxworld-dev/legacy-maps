@@ -133,32 +133,26 @@ LABEL2:
 }
 func MoveLineState(a1 ns.ObjectID, a2 int) {
 	var v0 int
-	v0 = a2
-	if v0 == 1 {
+	switch v0 = a2; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL2
-	}
-	if v0 == 5 {
+	case 5:
 		goto LABEL3
-	}
-	if v0 == 7 {
+	case 7:
 		goto LABEL4
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL5
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL6
-	}
-	if v0 == 6 {
+	case 6:
 		goto LABEL7
-	}
-	if v0 == 8 {
+	case 8:
 		goto LABEL8
+	default:
+		goto LABEL9
 	}
-	goto LABEL9
 LABEL1:
 	ns.Move(a1, wp34)
 	goto LABEL10
@@ -190,20 +184,18 @@ LABEL10:
 }
 func CreateFireWall() {
 	var v0 int
-	v0 = gvar11
-	if v0 == gvar5 {
+	switch v0 = gvar11; v0 {
+	case gvar5:
 		goto LABEL1
-	}
-	if v0 == gvar6 {
+	case gvar6:
 		goto LABEL2
-	}
-	if v0 == gvar7 {
+	case gvar7:
 		goto LABEL3
-	}
-	if v0 == gvar8 {
+	case gvar8:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar51 = 0
 	for {
@@ -273,20 +265,18 @@ func ChapterEndB() {
 }
 func DestroyFireWall() {
 	var v0 int
-	v0 = gvar11
-	if v0 == gvar5 {
+	switch v0 = gvar11; v0 {
+	case gvar5:
 		goto LABEL1
-	}
-	if v0 == gvar6 {
+	case gvar6:
 		goto LABEL2
-	}
-	if v0 == gvar7 {
+	case gvar7:
 		goto LABEL3
-	}
-	if v0 == gvar9 {
+	case gvar9:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar51 = 0
 	for {
@@ -433,32 +423,26 @@ func EnableLineD() {
 }
 func StartDemonTalk() {
 	var v0 int
-	v0 = gvar12
-	if v0 == 0 {
+	switch v0 = gvar12; v0 {
+	case 0:
 		goto LABEL1
-	}
-	if v0 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL4
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL5
-	}
-	if v0 == 5 {
+	case 5:
 		goto LABEL6
-	}
-	if v0 == 6 {
+	case 6:
 		goto LABEL7
-	}
-	if v0 == 7 {
+	case 7:
 		goto LABEL8
+	default:
+		goto LABEL9
 	}
-	goto LABEL9
 LABEL1:
 	flag4 = false
 	ns.WideScreen(true)

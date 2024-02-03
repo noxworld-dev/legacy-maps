@@ -361,23 +361,20 @@ func DrunkAttacks() {
 		goto LABEL1
 	}
 	v0 = ns.Random(1, 5)
-	v1 = v0
-	if v1 == 1 {
+	switch v1 = v0; v1 {
+	case 1:
 		goto LABEL2
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL3
-	}
-	if v1 == 3 {
+	case 3:
 		goto LABEL4
-	}
-	if v1 == 4 {
+	case 4:
 		goto LABEL5
-	}
-	if v1 == 5 {
+	case 5:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL2:
 	ns.Chat(obj31, "War07A.scr:DrunkardTaunt01")
 	goto LABEL7
@@ -495,26 +492,22 @@ LABEL1:
 func GetRandomMobYell() {
 	var v0 int
 	ivar105 = ns.Random(1, ivar103)
-	v0 = ivar105
-	if v0 == 1 {
+	switch v0 = ivar105; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL4
-	}
-	if v0 == 5 {
+	case 5:
 		goto LABEL5
-	}
-	if v0 == 6 {
+	case 6:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL1:
 	if !(flag75 == true && ns.CurrentHealth(obj25) > 0) {
 		goto LABEL8
@@ -687,14 +680,14 @@ LABEL1:
 }
 func MaxDialogStart() {
 	var v0 int
-	v0 = gvar148
-	if v0 == gvar142 {
+	switch v0 = gvar148; v0 {
+	case gvar142:
 		goto LABEL1
-	}
-	if v0 == gvar143 {
+	case gvar143:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.TellStory(ns.HumanMaleEatFood, "War07a.scr:MaxOffer01")
 	goto LABEL3
@@ -719,17 +712,16 @@ func MaxDialogEnd() {
 	v3 = 2
 	v4 = 0
 	v0 = ns.GetAnswer(obj21)
-	v5 = v0
-	if v5 == v4 {
+	switch v5 = v0; v5 {
+	case v4:
 		goto LABEL1
-	}
-	if v5 == v3 {
+	case v3:
 		goto LABEL2
-	}
-	if v5 == v2 {
+	case v2:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	gvar148 = gvar143
 	ResetMaxDialog()
@@ -789,14 +781,14 @@ func DorianRecognize() {
 	if flag82 {
 		goto LABEL1
 	}
-	v0 = gvar102
-	if v0 == gvar127 {
+	switch v0 = gvar102; v0 {
+	case gvar127:
 		goto LABEL2
-	}
-	if v0 == gvar128 {
+	case gvar128:
 		goto LABEL3
+	default:
+		goto LABEL1
 	}
-	goto LABEL1
 LABEL2:
 	ns.CreatureFollow(obj28, ns.GetHost())
 	if flag73 {
@@ -828,14 +820,14 @@ func GrunbarRecognize() {
 	if flag82 {
 		goto LABEL1
 	}
-	v0 = gvar102
-	if v0 == gvar127 {
+	switch v0 = gvar102; v0 {
+	case gvar127:
 		goto LABEL2
-	}
-	if v0 == gvar128 {
+	case gvar128:
 		goto LABEL3
+	default:
+		goto LABEL1
 	}
-	goto LABEL1
 LABEL2:
 	ns.CreatureFollow(obj27, ns.GetHost())
 	if flag77 {
@@ -867,14 +859,14 @@ func JorganRecognize() {
 	if flag82 {
 		goto LABEL1
 	}
-	v0 = gvar102
-	if v0 == gvar127 {
+	switch v0 = gvar102; v0 {
+	case gvar127:
 		goto LABEL2
-	}
-	if v0 == gvar128 {
+	case gvar128:
 		goto LABEL3
+	default:
+		goto LABEL1
 	}
-	goto LABEL1
 LABEL2:
 	ns.CreatureFollow(obj26, ns.GetHost())
 	if flag76 {
@@ -906,14 +898,14 @@ func AlbiRecognize() {
 	if flag82 {
 		goto LABEL1
 	}
-	v0 = gvar102
-	if v0 == gvar127 {
+	switch v0 = gvar102; v0 {
+	case gvar127:
 		goto LABEL2
-	}
-	if v0 == gvar128 {
+	case gvar128:
 		goto LABEL3
+	default:
+		goto LABEL1
 	}
-	goto LABEL1
 LABEL2:
 	ns.CreatureFollow(obj25, ns.GetHost())
 	if flag75 {
@@ -945,14 +937,14 @@ func Civvy3Recognize() {
 	if flag82 {
 		goto LABEL1
 	}
-	v0 = gvar102
-	if v0 == gvar127 {
+	switch v0 = gvar102; v0 {
+	case gvar127:
 		goto LABEL2
-	}
-	if v0 == gvar128 {
+	case gvar128:
 		goto LABEL3
+	default:
+		goto LABEL1
 	}
-	goto LABEL1
 LABEL2:
 	ns.CreatureFollow(obj29, ns.GetHost())
 	if flag78 {
@@ -984,14 +976,14 @@ func Civvy4Recognize() {
 	if flag82 {
 		goto LABEL1
 	}
-	v0 = gvar102
-	if v0 == gvar127 {
+	switch v0 = gvar102; v0 {
+	case gvar127:
 		goto LABEL2
-	}
-	if v0 == gvar128 {
+	case gvar128:
 		goto LABEL3
+	default:
+		goto LABEL1
 	}
-	goto LABEL1
 LABEL2:
 	ns.CreatureFollow(obj30, ns.GetHost())
 	if flag79 {
@@ -1321,17 +1313,16 @@ func WardenArrestEnd() {
 	ns.Wander(obj29)
 	ns.Wander(obj30)
 	v0 = ns.GetAnswer(obj22)
-	v1 = v0
-	if v1 == 0 {
+	switch v1 = v0; v1 {
+	case 0:
 		goto LABEL1
-	}
-	if v1 == 1 {
+	case 1:
 		goto LABEL2
-	}
-	if v1 == 2 {
+	case 2:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	gvar101 = gvar125
 	ns.LockDoor(obj43)
@@ -1580,8 +1571,7 @@ LABEL2:
 	return
 }
 func MorganContact() {
-	r0 := ns.IsAttackedBy(obj23, ns.GetCaller())
-	if !r0 {
+	if !ns.IsAttackedBy(obj23, ns.GetCaller()) {
 		goto LABEL1
 	}
 	if !flag92 {
@@ -2152,8 +2142,7 @@ func PlayerDeath() {
 	ns.DeathScreen(7)
 }
 func MickContact() {
-	r0 := ns.IsAttackedBy(obj24, ns.GetCaller())
-	if !r0 {
+	if !ns.IsAttackedBy(obj24, ns.GetCaller()) {
 		goto LABEL1
 	}
 	if !flag92 {
@@ -2207,14 +2196,14 @@ LABEL1:
 }
 func EmptyPlayerInventory() {
 	var v0 int
-	v0 = gvar151
-	if v0 == gvar149 {
+	switch v0 = gvar151; v0 {
+	case gvar149:
 		goto LABEL1
-	}
-	if v0 == gvar150 {
+	case gvar150:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	ns.Drop(ns.GetHost(), obj5[ivar153])
 	ivar154 += 1
@@ -2326,8 +2315,7 @@ LABEL1:
 	return
 }
 func ScorpionAway() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

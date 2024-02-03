@@ -227,8 +227,7 @@ func UnlockChamberDoors() {
 	ns.UnlockDoor(obj6)
 }
 func MonsterGoHomeLobo() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.AggressionLevel(ns.GetCaller(), 0)
@@ -238,8 +237,7 @@ LABEL1:
 }
 func MonsterGoHome() {
 	PlaySubMusic()
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -248,8 +246,7 @@ LABEL1:
 }
 func MonsterHostile() {
 	PlaySubMusic()
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.AggressionLevel(ns.GetCaller(), 0.83)
@@ -257,8 +254,7 @@ LABEL1:
 	return
 }
 func MonsterGoHomePassive() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())

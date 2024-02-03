@@ -417,23 +417,20 @@ func hecIsKilling() {
 	}
 	flag9 = false
 	ns.LookAtObject(ns.GetHost(), gvar54)
-	v0 = gvar20
-	if v0 == gvar4 {
+	switch v0 = gvar20; v0 {
+	case gvar4:
 		goto LABEL2
-	}
-	if v0 == gvar5 {
+	case gvar5:
 		goto LABEL3
-	}
-	if v0 == gvar6 {
+	case gvar6:
 		goto LABEL4
-	}
-	if v0 == gvar7 {
+	case gvar7:
 		goto LABEL5
-	}
-	if v0 == gvar8 {
+	case gvar8:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL2:
 	ns.LookAtObject(gvar54, obj21)
 	ns.LookAtObject(ns.GetHost(), obj21)

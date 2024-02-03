@@ -412,26 +412,22 @@ func LichWallsDown() {
 }
 func SentryRun() {
 	var v0 int
-	v0 = gvar65
-	if v0 == gvar59 {
+	switch v0 = gvar65; v0 {
+	case gvar59:
 		goto LABEL1
-	}
-	if v0 == gvar60 {
+	case gvar60:
 		goto LABEL2
-	}
-	if v0 == gvar61 {
+	case gvar61:
 		goto LABEL3
-	}
-	if v0 == gvar62 {
+	case gvar62:
 		goto LABEL4
-	}
-	if v0 == gvar63 {
+	case gvar63:
 		goto LABEL5
-	}
-	if v0 == gvar64 {
+	case gvar64:
 		goto LABEL6
+	default:
+		goto LABEL7
 	}
-	goto LABEL7
 LABEL1:
 	ns.ObjectOff(obj53)
 	ns.ObjectOn(obj54)

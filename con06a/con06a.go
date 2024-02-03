@@ -342,8 +342,7 @@ func MapInitialize() {
 	ns.Damage(obj4, 0, 100, 0)
 }
 func NoEnemys() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -351,8 +350,7 @@ LABEL1:
 	return
 }
 func MonstersGoHome() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.AggressionLevel(ns.GetCaller(), 0.16)

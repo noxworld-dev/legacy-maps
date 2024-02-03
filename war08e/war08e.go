@@ -142,8 +142,7 @@ func OpenElevatorWalls() {
 	ns.WallGroupOpen(gvar30)
 }
 func NoMonsters() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -165,14 +164,14 @@ func SecretFound() {
 }
 func PriestReport() {
 	var v0 int
-	v0 = gvar48
-	if v0 == gvar42 {
+	switch v0 = gvar48; v0 {
+	case gvar42:
 		goto LABEL1
-	}
-	if v0 == gvar43 {
+	case gvar43:
 		goto LABEL2
+	default:
+		goto LABEL3
 	}
-	goto LABEL3
 LABEL1:
 	if !ns.IsTrigger(obj22) {
 		goto LABEL4
@@ -278,14 +277,14 @@ func GetGolemHandles() {
 	}
 	return
 LABEL1:
-	v0 = gvar49
-	if v0 == gvar46 {
+	switch v0 = gvar49; v0 {
+	case gvar46:
 		goto LABEL2
-	}
-	if v0 == gvar47 {
+	case gvar47:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL2:
 	ns.ObjectOff(ns.GetTrigger())
 	ns.DestroyEveryChat()

@@ -244,17 +244,16 @@ func PlayerDeath() {
 }
 func CaptainDialogStart() {
 	var v0 int
-	v0 = gvar62
-	if v0 == gvar53 {
+	switch v0 = gvar62; v0 {
+	case gvar53:
 		goto LABEL1
-	}
-	if v0 == gvar54 {
+	case gvar54:
 		goto LABEL2
-	}
-	if v0 == gvar55 {
+	case gvar55:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.TellStory(ns.SwordsmanHurt, "War09a:CaptainGreet")
 	goto LABEL4
@@ -269,17 +268,16 @@ LABEL4:
 }
 func CaptainDialogEnd() {
 	var v0 int
-	v0 = gvar62
-	if v0 == gvar53 {
+	switch v0 = gvar62; v0 {
+	case gvar53:
 		goto LABEL1
-	}
-	if v0 == gvar54 {
+	case gvar54:
 		goto LABEL2
-	}
-	if v0 == gvar55 {
+	case gvar55:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.JournalEntry(ns.GetHost(), "FindMordwyn", 2)
 	ns.JournalEntry(ns.GetHost(), "FindOutpost", 2)
@@ -297,20 +295,18 @@ LABEL4:
 }
 func MordwynDialogStart() {
 	var v0 int
-	v0 = gvar63
-	if v0 == gvar56 {
+	switch v0 = gvar63; v0 {
+	case gvar56:
 		goto LABEL1
-	}
-	if v0 == gvar57 {
+	case gvar57:
 		goto LABEL2
-	}
-	if v0 == gvar58 {
+	case gvar58:
 		goto LABEL3
-	}
-	if v0 == gvar59 {
+	case gvar59:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ns.LookAtObject(obj19, ns.GetHost())
 	ns.TellStory(ns.SwordsmanHurt, "War09a:MordwynGreet")
@@ -334,20 +330,18 @@ LABEL5:
 }
 func MordwynDialogEnd() {
 	var v0 int
-	v0 = gvar63
-	if v0 == gvar56 {
+	switch v0 = gvar63; v0 {
+	case gvar56:
 		goto LABEL1
-	}
-	if v0 == gvar57 {
+	case gvar57:
 		goto LABEL2
-	}
-	if v0 == gvar58 {
+	case gvar58:
 		goto LABEL3
-	}
-	if v0 == gvar59 {
+	case gvar59:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	gvar63 = gvar57
 	ns.WideScreen(false)
@@ -472,8 +466,7 @@ func GiveArmorToPlayer() {
 	ns.StartDialog(obj19, ns.GetHost())
 }
 func KeepOut() {
-	r1 := ns.IsAttackedBy(ns.GetCaller(), ns.GetHost())
-	if !r1 {
+	if !ns.IsAttackedBy(ns.GetCaller(), ns.GetHost()) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -576,17 +569,16 @@ func WispAction(a1 int) {
 		v0 float32
 		v1 int
 	)
-	v1 = gvar75[a1]
-	if v1 == gvar66 {
+	switch v1 = gvar75[a1]; v1 {
+	case gvar66:
 		goto LABEL1
-	}
-	if v1 == gvar68 {
+	case gvar68:
 		goto LABEL2
-	}
-	if v1 == gvar67 {
+	case gvar67:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	v0 = ns.Distance(ns.GetObjectX(obj73[a1]), ns.GetObjectY(obj73[a1]), ns.GetObjectX(ns.GetHost()), ns.GetObjectY(ns.GetHost()))
 	if !(v0 < 70) {
@@ -635,14 +627,14 @@ LABEL1:
 	}
 	return
 LABEL2:
-	v1 = gvar75[v0]
-	if v1 == gvar65 {
+	switch v1 = gvar75[v0]; v1 {
+	case gvar65:
 		goto LABEL3
-	}
-	if v1 == gvar68 {
+	case gvar68:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL3:
 	gvar75[v0] = gvar66
 	ns.CreatureFollow(ns.GetTrigger(), ns.GetCaller())
@@ -671,11 +663,12 @@ LABEL1:
 	}
 	return
 LABEL2:
-	v1 = gvar75[v0]
-	if v1 == gvar67 {
+	switch v1 = gvar75[v0]; v1 {
+	case gvar67:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL3:
 	gvar75[v0] = gvar68
 	ivar76[v0] = 0

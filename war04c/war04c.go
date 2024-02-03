@@ -221,17 +221,16 @@ func InitializeBlockTrap() {
 }
 func BlockTrapBoom(a1 int) {
 	var v0 int
-	v0 = a1
-	if v0 == 1 {
+	switch v0 = a1; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.AudioEvent(ns.HammerMissing, wp28)
 	ns.Effect(ns.JIGGLE, ns.GetWaypointX(wp28), ns.GetWaypointY(wp28), fvar9, 0)
@@ -249,17 +248,16 @@ LABEL4:
 }
 func ResetBlockTrap(a1 int) {
 	var v0 int
-	v0 = a1
-	if v0 == 1 {
+	switch v0 = a1; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
+	default:
+		goto LABEL4
 	}
-	goto LABEL4
 LABEL1:
 	ns.ObjectGroupOn(gvar42)
 	ns.AudioEvent(ns.TriggerReleased, wp28)
@@ -496,8 +494,7 @@ func InitializeKeeper() {
 	ns.LockDoor(obj68)
 }
 func EnemyGoHome() {
-	r1 := ns.IsAttackedBy(ns.GetHost(), ns.GetCaller())
-	if !(r1 && ns.GetCaller() != obj64) {
+	if !(ns.IsAttackedBy(ns.GetHost(), ns.GetCaller()) && ns.GetCaller() != obj64) {
 		goto LABEL1
 	}
 	ns.GoBackHome(ns.GetCaller())
@@ -677,41 +674,32 @@ func Secret02Found() {
 }
 func CheckRows(a1 int) {
 	var v0 int
-	v0 = a1
-	if v0 == 1 {
+	switch v0 = a1; v0 {
+	case 1:
 		goto LABEL1
-	}
-	if v0 == 2 {
+	case 2:
 		goto LABEL2
-	}
-	if v0 == 3 {
+	case 3:
 		goto LABEL3
-	}
-	if v0 == 4 {
+	case 4:
 		goto LABEL4
-	}
-	if v0 == 5 {
+	case 5:
 		goto LABEL5
-	}
-	if v0 == 6 {
+	case 6:
 		goto LABEL6
-	}
-	if v0 == 7 {
+	case 7:
 		goto LABEL7
-	}
-	if v0 == 8 {
+	case 8:
 		goto LABEL8
-	}
-	if v0 == 9 {
+	case 9:
 		goto LABEL9
-	}
-	if v0 == 10 {
+	case 10:
 		goto LABEL10
-	}
-	if v0 == 11 {
+	case 11:
 		goto LABEL11
+	default:
+		goto LABEL12
 	}
-	goto LABEL12
 LABEL1:
 	if !(ivar78 > 0) {
 		goto LABEL13

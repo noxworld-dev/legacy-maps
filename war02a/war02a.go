@@ -771,20 +771,18 @@ func flamesOff() {
 }
 func flameWalk() {
 	var v0 int
-	v0 = gvar166
-	if v0 == gvar99 {
+	switch v0 = gvar166; v0 {
+	case gvar99:
 		goto LABEL1
-	}
-	if v0 == gvar100 {
+	case gvar100:
 		goto LABEL2
-	}
-	if v0 == gvar101 {
+	case gvar101:
 		goto LABEL3
-	}
-	if v0 == gvar102 {
+	case gvar102:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar4 = 0
 	for {
@@ -883,20 +881,18 @@ LABEL19:
 }
 func flameWalk2() {
 	var v0 int
-	v0 = gvar167
-	if v0 == gvar103 {
+	switch v0 = gvar167; v0 {
+	case gvar103:
 		goto LABEL1
-	}
-	if v0 == gvar104 {
+	case gvar104:
 		goto LABEL2
-	}
-	if v0 == gvar105 {
+	case gvar105:
 		goto LABEL3
-	}
-	if v0 == gvar106 {
+	case gvar106:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar150 = 0
 	for {
@@ -995,20 +991,18 @@ LABEL19:
 }
 func flameWalk3() {
 	var v0 int
-	v0 = gvar168
-	if v0 == gvar107 {
+	switch v0 = gvar168; v0 {
+	case gvar107:
 		goto LABEL1
-	}
-	if v0 == gvar108 {
+	case gvar108:
 		goto LABEL2
-	}
-	if v0 == gvar109 {
+	case gvar109:
 		goto LABEL3
-	}
-	if v0 == gvar110 {
+	case gvar110:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar151 = 0
 	for {
@@ -1107,20 +1101,18 @@ LABEL19:
 }
 func flameWalk4() {
 	var v0 int
-	v0 = gvar169
-	if v0 == gvar111 {
+	switch v0 = gvar169; v0 {
+	case gvar111:
 		goto LABEL1
-	}
-	if v0 == gvar112 {
+	case gvar112:
 		goto LABEL2
-	}
-	if v0 == gvar113 {
+	case gvar113:
 		goto LABEL3
-	}
-	if v0 == gvar114 {
+	case gvar114:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar152 = 0
 	for {
@@ -1219,20 +1211,18 @@ LABEL19:
 }
 func flameWalk5() {
 	var v0 int
-	v0 = gvar170
-	if v0 == gvar115 {
+	switch v0 = gvar170; v0 {
+	case gvar115:
 		goto LABEL1
-	}
-	if v0 == gvar116 {
+	case gvar116:
 		goto LABEL2
-	}
-	if v0 == gvar117 {
+	case gvar117:
 		goto LABEL3
-	}
-	if v0 == gvar118 {
+	case gvar118:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar153 = 0
 	for {
@@ -1331,20 +1321,18 @@ LABEL19:
 }
 func flameWalk6() {
 	var v0 int
-	v0 = gvar171
-	if v0 == gvar119 {
+	switch v0 = gvar171; v0 {
+	case gvar119:
 		goto LABEL1
-	}
-	if v0 == gvar120 {
+	case gvar120:
 		goto LABEL2
-	}
-	if v0 == gvar121 {
+	case gvar121:
 		goto LABEL3
-	}
-	if v0 == gvar122 {
+	case gvar122:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar154 = 0
 	for {
@@ -1443,20 +1431,18 @@ LABEL19:
 }
 func flameWalk7() {
 	var v0 int
-	v0 = gvar172
-	if v0 == gvar123 {
+	switch v0 = gvar172; v0 {
+	case gvar123:
 		goto LABEL1
-	}
-	if v0 == gvar124 {
+	case gvar124:
 		goto LABEL2
-	}
-	if v0 == gvar125 {
+	case gvar125:
 		goto LABEL3
-	}
-	if v0 == gvar126 {
+	case gvar126:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar154 = 0
 	for {
@@ -1555,20 +1541,18 @@ LABEL19:
 }
 func flameWalk8() {
 	var v0 int
-	v0 = gvar173
-	if v0 == gvar127 {
+	switch v0 = gvar173; v0 {
+	case gvar127:
 		goto LABEL1
-	}
-	if v0 == gvar128 {
+	case gvar128:
 		goto LABEL2
-	}
-	if v0 == gvar129 {
+	case gvar129:
 		goto LABEL3
-	}
-	if v0 == gvar130 {
+	case gvar130:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar155 = 0
 	for {
@@ -1667,20 +1651,18 @@ LABEL19:
 }
 func flameWalk9() {
 	var v0 int
-	v0 = gvar174
-	if v0 == gvar131 {
+	switch v0 = gvar174; v0 {
+	case gvar131:
 		goto LABEL1
-	}
-	if v0 == gvar132 {
+	case gvar132:
 		goto LABEL2
-	}
-	if v0 == gvar133 {
+	case gvar133:
 		goto LABEL3
-	}
-	if v0 == gvar134 {
+	case gvar134:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar154 = 0
 	for {
@@ -1779,20 +1761,18 @@ LABEL19:
 }
 func flameWalk10() {
 	var v0 int
-	v0 = gvar175
-	if v0 == gvar135 {
+	switch v0 = gvar175; v0 {
+	case gvar135:
 		goto LABEL1
-	}
-	if v0 == gvar136 {
+	case gvar136:
 		goto LABEL2
-	}
-	if v0 == gvar137 {
+	case gvar137:
 		goto LABEL3
-	}
-	if v0 == gvar138 {
+	case gvar138:
 		goto LABEL4
+	default:
+		goto LABEL5
 	}
-	goto LABEL5
 LABEL1:
 	ivar154 = 0
 	for {

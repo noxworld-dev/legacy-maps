@@ -196,23 +196,20 @@ func GearhartDialogStart() {
 	var v0 int
 	ns.LookAtObject(obj38, ns.GetHost())
 	ns.ObjectGroupOff(gvar48)
-	v0 = gvar41
-	if v0 == gvar33 {
+	switch v0 = gvar41; v0 {
+	case gvar33:
 		goto LABEL1
-	}
-	if v0 == gvar34 {
+	case gvar34:
 		goto LABEL2
-	}
-	if v0 == gvar35 {
+	case gvar35:
 		goto LABEL3
-	}
-	if v0 == gvar36 {
+	case gvar36:
 		goto LABEL4
-	}
-	if v0 == gvar37 {
+	case gvar37:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	ns.DestroyEveryChat()
 	ns.TellStory(ns.SwordsmanHurt, "War02a:GearhartTalk02")
@@ -239,23 +236,20 @@ LABEL6:
 func GearhartDialogEnd() {
 	var v0 int
 	ns.ObjectGroupOn(gvar48)
-	v0 = gvar41
-	if v0 == gvar33 {
+	switch v0 = gvar41; v0 {
+	case gvar33:
 		goto LABEL1
-	}
-	if v0 == gvar34 {
+	case gvar34:
 		goto LABEL2
-	}
-	if v0 == gvar35 {
+	case gvar35:
 		goto LABEL3
-	}
-	if v0 == gvar36 {
+	case gvar36:
 		goto LABEL4
-	}
-	if v0 == gvar37 {
+	case gvar37:
 		goto LABEL5
+	default:
+		goto LABEL6
 	}
-	goto LABEL6
 LABEL1:
 	ns.CancelDialog(obj38)
 	ns.CreatureGuard(obj38, ns.GetWaypointX(wp50), ns.GetWaypointY(wp50), ns.GetWaypointX(wp52), ns.GetWaypointY(wp52), 0)
